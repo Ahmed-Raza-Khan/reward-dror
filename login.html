@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reward Dror - Home</title>
@@ -9,85 +9,86 @@
     <link rel="icon" type="image/x-icon" href="assests/images/logo.png">
     <link rel="stylesheet" href="assests/css/login.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  </head>
-  <body class="flex items-center justify-center relative main-body h-full overflow-hidden">
+</head>
+<body class="flex items-center justify-center relative main-body h-full overflow-hidden">
 
     <!-- <section> -->
-      <div class="absolute top-0 right-0 opacity-100"><img src="assests/images/right-top-image-background.png" alt=""></div>
-      <div class="absolute bottom-0 left-0 opacity-100"><img src="assests/images/left-bottom-image-background.png" alt=""></div>
+    <div class="absolute top-0 right-0 opacity-100"><img src="assests/images/right-top-image-background.png" alt=""></div>
+    <div class="absolute bottom-0 left-0 opacity-100"><img src="assests/images/left-bottom-image-background.png" alt=""></div>
 
-      <main class="relative z-10 w-full max-w-7xl rounded-3xl p-6 md:p-12 shadow-2xl flex flex-col md:flex-row gap-12 items-center main-body-2">
+    <main class="relative z-10 w-full h-full max-w-7xl rounded-3xl p-6 md:p-14 shadow-2xl flex flex-col md:flex-row gap-12 items-center main-body-2">
+        <div class="flex-1 flex flex-col items-center md:pr-0">
+            <a href="login.html"><img src="assests/images/logo.png" alt="Reward Dror Logo" class="mb-0" width="180" height="180"></a>
 
-          <div class="flex-1 flex flex-col items-center md:pr-0">
-              <a href="login.html"><img src="assests/images/logo.png" alt="Reward Dror Logo" class="mb-0" width="180" height="180"></a>
+            <h1 class="text-6xl font-extrabold mb-10 text-[#0077B6] left-logo-heading">
+                <span>Reward</span>
+                <span class="text-[#FF7F32]">Dror</span>
+            </h1>
 
-              <h1 class="text-6xl font-extrabold mb-10 text-[#0077B6] left-logo-heading">
-                  <span>Reward</span>
-                  <span class="text-[#FF7F32]">Dror</span>
-              </h1>
+            <p class="text-5xl font-semibold text-[#0077B6] leading-tight tracking-tight left-description-logo">
+                Manage Rewards<br>
+                With Ease And<br>
+                Precision
+            </p>
+        </div>
 
-              <p class="text-5xl font-semibold text-[#0077B6] leading-tight tracking-tight left-description-logo">
-                  Manage Rewards<br>
-                  With Ease And<br>
-                  Precision
-              </p>
-          </div>
+        <div class="w-full max-w-xl rounded-2xl p-8 md:p-20 flex-none self-stretch flex flex-col justify-center login-form-main">            
+            <h2 class="text-3xl font-bold text-[#333333] mb-2">Admin Login</h2>
+            <p class="text-[#666666] mb-10">Please login to your account</p>
 
-          <div class="w-full max-w-xl rounded-2xl p-8 md:p-20 flex-none self-stretch flex flex-col justify-center login-form-main">
-              
-              <h2 class="text-3xl font-bold text-[#333333] mb-2">Admin Login</h2>
+            <form action="#" class="space-y-6">
+                <div class="space-y-2 form-all-headings">
+                    <label for="email" class="block text-sm font-semibold text-[#222222]">
+                        Email Address <span class="text-[#FF0000]">*</span>
+                    </label>
+                    <div class="relative">
+                        <input type="email" id="email" name="email" required placeholder="Enter Email"
+                        class="w-full px-5 py-3.5 rounded-full focus:ring-2 focus:ring-blue-200 focus:border-blue-400 text-lg text-gray-900 placeholder-gray-400">
+                    </div>
+                </div>
 
-              <p class="text-[#666666] mb-10">Please login to your account</p>
+                <div class="space-y-2 form-all-headings">
+                    <label for="password" class="block text-sm font-semibold text-[#222222]">
+                        Password <span class="text-[#FF0000]">*</span>
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required
+                            class="w-full px-5 py-3.5 border border-gray-300 rounded-full focus:ring-2 focus:ring-blue-200 focus:border-blue-400 text-lg text-gray-900 placeholder-gray-400">
+                        <div class="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer password-eye">
+                            <!-- <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg> -->
+                            <img src="assests/images/eye-hidden.svg" alt="hidded" class="h-5 w-5">
+                        </div>
+                    </div>
+                </div>
 
-              <form action="#" class="space-y-6">
-                  <div class="space-y-2">
-                      <label for="email" class="block text-sm font-semibold text-gray-900">
-                          Email Address <span class="text-red-500">*</span>
-                      </label>
-                      <div class="relative">
-                          <input type="email" id="email" name="email" value="info@example.com" required
-                                class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 text-lg text-gray-900 placeholder-gray-400">
-                      </div>
-                  </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <!-- <div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in"> -->
+                        <!-- <div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in bauble_box">
+                            <input class="bauble_input" id="bauble_check" name="bauble" type="checkbox">
+                            <label class="bauble_label" for="bauble_check">Toggle</label>
+                        </div> -->
+                            <!-- <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-gray-300 appearance-none cursor-pointer"/>
+                            <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div> -->
+                        <label for="toggle" class="form-remember-me text-[#0077B6]">Remember Me</label>
+                    </div>
+                    <div>
+                        <a href="forgot-password.html" class="form-forgot-me text-[#0077B6] hover:underline">Forgot Password?</a>
+                    </div>
+                </div>
 
-                  <div class="space-y-2">
-                      <label for="password" class="block text-sm font-semibold text-gray-900">
-                          Password <span class="text-red-500">*</span>
-                      </label>
-                      <div class="relative">
-                          <input type="password" id="password" name="password" placeholder="Enter Password" required
-                                class="w-full px-5 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 text-lg text-gray-900 placeholder-gray-400">
-                          <div class="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer password-eye">
-                              <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                              </svg>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="flex items-center justify-between">
-                      <div class="flex items-center gap-3">
-                          <div class="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in">
-                              <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-gray-300 appearance-none cursor-pointer"/>
-                              <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-                          </div>
-                          <label for="toggle" class="text-sm font-medium text-gray-700">Remember Me</label>
-                      </div>
-                      <div>
-                          <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Forgot Password?</a>
-                      </div>
-                  </div>
-
-                  <button type="submit" 
-                          class="w-full flex justify-center items-center px-6 py-4 border border-transparent rounded-xl shadow-sm text-xl font-bold text-white bg-reward-orange hover:bg-[#e86036] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B3D]">
-                      Login
-                  </button>
-              </form>
-          </div>
-      </main>
+                <button type="submit" 
+                        class="w-full flex justify-center items-center px-6 py-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B3D] login-button-bottom">
+                    Login
+                </button>
+            </form>
+        </div>
+    </main>
     <!-- </section> -->
 
-    <!-- <script src=""></script> -->
   </body>
 </html>
