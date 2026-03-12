@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-ibm-plex-sans: 'IBM Plex Sans';
+    --font-nunito-sans: 'Nunito Sans';
+    --font-public-sans: 'Public Sans';
+    --font-jost: 'Jost';
+    --font-poppins: 'Poppins';
+    --font-regular: 'regular';
+    --font-bold: 'Bold';
+    --font-medium: 'Medium';
+    --font-light: 'Light';
+    --font-semibold: 'SemiBold';
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --color-blue: #0077B6;
+    --color-black-2: #222222;
+    --color-black-3: #333333;
+    --color-black-6: #666666;
+    --color-gray-707: #707C8B;
+    --color-red-ff0: #FF0000;
+    --color-white-fff: #FFFFFF;
+    --color-white-e1f: #E1F3FC;
+    --color-white-d7d: #D7D7D7;
+    --color-blue-10: #0077B61A;
+    --color-blue-70: #528AF0B2;
+}
+
+.main-body {
+    background: linear-gradient(0deg, #002279 -21%, #00B1FF 89.11%);
+}
+
+.main-body-2 {
+    background-color: var(--color-white-e1f);
+}
+
+.left-logo-heading {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: -30px;
+}
+
+.left-description-logo {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 38px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.login-form-main {
+    background-color: var(--color-white-fff);
+    border: 1px dashed var(--color-blue-10);
+    box-shadow: 0 3.864px 48.295px 0 rgba(0, 0, 0, 0.08);
+}
+
+.login-form-main h2{
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 43px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.login-form-main p{
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0%;
+}
