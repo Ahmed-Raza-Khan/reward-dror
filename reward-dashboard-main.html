@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reward Dror - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/x-icon" href="assests/images/logo.png">
+    <link rel="stylesheet" href="assests/css/dashboard-main.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="bg-[#E2F7FF] h-25 flex items-center p-4 px-6 fixed top-0 left-0 w-full z-10">
+        <div class="flex items-center gap-3">
+            <img src="assests/images/navbar-logo-img-main.png" alt="RewardDror Logo" class="rounded-lg shadow-inner" width="62" height="62">
+            <h1 class="text-2xl left-logo-heading">
+                <span class="text-[#0077B6]">Reward</span><span class="text-[#FF7F32]">Dror</span>
+            </h1>
+        </div>
+
+        <div class="flex-grow flex justify-center ml-10">
+            <div class="relative w-full max-w-[600px]">
+                <input type="text" placeholder="Search rewards, businesses, transactions…" class="w-full bg-[#FFFFFF] text-[#404A60] placeholder:text-[#404A60] border border-[#00000000] rounded-full h-13 pl-6 pr-14 focus:outline-none focus:ring-1 focus:ring-[#333333]">
+                
+                <button class="absolute right-[15px] top-[5px] h-[40px] w-[40px] text-white rounded-full flex items-center justify-center search-icon-back-nav">
+                    <img src="assests/images/search-icon-nav.svg" alt="search" width="18" height="18">
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6 ml-auto">            
+            <div class="relative group bg-[#FFFFFF] p-3 rounded-2xl button-language-all">
+                <button class="flex items-center gap-2.5 focus:outline-none">
+                    <img src="assests/images/flag-country.png" alt="US Flag" class="w-7 h-7 rounded">
+                    English
+                    <img src="assests/images/down arrow-lang-user.svg" alt="arrow down" class="w-3 h-3">
+                </button>
+                
+                <div class="absolute right-0 top-full mt-0 w-32 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="UK Flag" class="w-5 h-4 rounded-sm">
+                        English (UK)
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Español
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/pk.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Pakistan
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/sa.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Saudia Arabia
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tr.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Turkey
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ir.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Iran
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-3 focus:outline-none profile-user-all">
+                    <img src="assests/images/profile-image-men.png" alt="Profile of Bella Edward" class="w-13 h-13 rounded-full border-2 border-[#DC6C09] shadow-md">
+                    
+                    <span class="flex items-center gap-1.5">
+                        Bella Edward
+                        <img src="assests/images/down arrow-lang-user.svg" alt="arrow down" class="w-3 h-3">
+                    </span>
+                </button>
+                
+                <div class="absolute right-0 top-full mt-0 w-40 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Your Profile</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Settings</a>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-red-600 hover:bg-gray-50">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-25 flex min-h-screen bg-[#F8F9FA]">  
+        <aside class="w-64 bg-white border-r border-gray-100 flex flex-col fixed h-full left-0">
+            <nav class="flex-1 px-4 py-6 space-y-2 side-navbar-buttons-all">
+                <a href="reward-dashboard-main.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
+                    <img src="assests/images/dashboard-icon.svg" alt="dashboard" width="20" height="20">
+                    <span class="active">Dashboard</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="assests/images/rewards-menagement-icon.svg" alt="reawards" width="23" height="23">
+                    <span>Rewards Management</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="assests/images/fee-configuration-icon.svg" alt="fee" width="23" height="23">
+                    <span>Fee Configuration</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="assests/images/system-settings-icon.svg" alt="system" width="23" height="23">
+                    <span>System Settings</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="assests/images/bussiness-api.svg" alt="bussiness" width="23" height="23">
+                    <span>Business API</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="assests/images/transaction-icon.svg" alt="transaction" width="23" height="23">
+                    <span>Transactions</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="ml-64 flex-1 p-8">            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                            
+                <div class="bg-[#FFFFFF] p-6 rounded-md shadow-sm border border-gray-50 flex flex-col justify-between">
+                    <div>
+                        <h3 class="">Total transactions</h3>
+                        <p class="text-3xl mt-2">1204</p>
+                    </div>
+                    <div class="flex items-end justify-between mt-4">
+                        <div class="flex flex-col">
+                            <span class="">16.8% ↑</span>
+                            <span class="text-xs">Since last month</span>
+                        </div>
+                        <div class="absolute bottom-[370px] left-[380px] w-35 h-10 rounded-md flex items-center justify-center">
+                            <img src="assests/images/SVG-1.svg" alt="">
+                            <!-- <svg class="w-full h-full text-red-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M0 35 L20 25 L40 30 L60 10 L80 20 L100 5" />
+                            </svg> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-md shadow-sm border border-gray-50 flex flex-col justify-between">
+                    <div>
+                        <h3 class="">Total revenue</h3>
+                        <p class="text-3xl mt-2">$2156</p>
+                    </div>
+                    <div class="flex items-end justify-between mt-4">
+                        <div class="flex flex-col">
+                            <span class="">3.51% ↑</span>
+                            <span class="text-xs">Since last month</span>
+                        </div>
+                        <div class="absolute bottom-[370px] left-[650px] w-35 h-10 rounded-md flex items-center justify-center">
+                            <img src="assests/images/SVG-2.svg" alt="">
+                            <!-- <svg class="w-full h-full text-emerald-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M0 20 L20 30 L40 10 L60 25 L80 15 L100 35" />
+                            </svg> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-50 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-gray-500 font-medium text-sm">Active rewards count</h3>
+                        <p class="text-3xl font-bold text-gray-800 mt-2">2,120</p>
+                    </div>
+                    <div class="flex items-end justify-between mt-4">
+                        <div class="flex flex-col">
+                            <span class="text-red-500 font-semibold text-sm">2.87% ↓</span>
+                            <span class="text-gray-400 text-xs">Since last month</span>
+                        </div>
+                        <div class="absolute bottom-[370px] left-[910px] w-35 h-10 rounded-md flex items-center justify-center">
+                            <img src="assests/images/SVG-3.svg" alt="">
+                        <!-- <div class="w-20 h-10 bg-red-50 rounded-md flex items-center justify-center"> -->
+                            <!-- <svg class="w-full h-full text-red-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M0 5 L20 15 L40 5 L60 25 L80 10 L100 30" />
+                            </svg> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-50 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-gray-500 font-medium text-sm">Active business API accounts</h3>
+                        <p class="text-3xl font-bold text-gray-800 mt-2">$1,473</p>
+                    </div>
+                    <div class="flex items-end justify-between mt-4">
+                        <div class="flex flex-col">
+                            <span class="text-emerald-500 font-semibold text-sm">9.19% ↑</span>
+                            <span class="text-gray-400 text-xs">Since last month</span>
+                        </div>
+                        <div class="w-20 h-10 bg-gray-50 rounded-md flex items-center justify-center">
+                            <svg class="w-full h-full text-indigo-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M0 30 L20 10 L40 35 L60 5 L80 25 L100 15" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ihave make the navbar just make now a sidebar which have dashboard image with text button which is default active to show dashboard then rewards image and text then fee image then text then system image then text then businesses image then text then transaction image then text then total transaction box with heading then text number  then green percentage then text then red chart then total revenue card then number text then green percentage then text then green chart then active reward count card then number text then red percentage then text then red chart then active business api accounts card then number text then green percentage then text then gray chart make this in html css and tailwind as shown in given image -->
+    <!-- <div class="pt-24 px-10">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Navbar has been successfully recreated.</h2>
+        <p class="text-gray-600">This example uses Tailwind CSS via CDN. The dropdowns are configured to show on hover for this demonstration.</p>
+    </div> -->
+
+  </body>
+</html>

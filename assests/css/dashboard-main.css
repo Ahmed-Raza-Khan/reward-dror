@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-ibm-plex-sans: 'IBM Plex Sans';
+    --font-nunito-sans: 'Nunito Sans';
+    --font-public-sans: 'Public Sans';
+    --font-jost: 'Jost';
+    --font-poppins: 'Poppins';
+    --font-regular: 'regular';
+    --font-bold: 'Bold';
+    --font-medium: 'Medium';
+    --font-light: 'Light';
+    --font-semibold: 'SemiBold';
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --color-blue: #0077B6;
+    --color-black-0: #000000;
+    --color-black-2: #222222;
+    --color-black-3: #333333;
+    --color-black-6: #666666;
+    --color-gray-707: #707C8B;
+    --color-red-ff0: #FF0000;
+    --color-white-fff: #FFFFFF;
+    --color-white-e1f: #E1F3FC;
+    --color-white-d7d: #D7D7D7;
+    --color-blue-10: #0077B61A;
+    --color-blue-70: #528AF0B2;
+    --color-gray-404: #404A60;
+}
+
+
+/* navbar section */
+.left-logo-heading {
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.search-icon-back-nav {
+    background: var(--color-p, linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%));
+}
+
+.button-language-all {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-regular);
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: var(--color-gray-404);
+}
+
+.profile-user-all span {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-regular);
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-black-3);
+}
+
+.side-navbar-buttons-all .active{
+    font-family: var(--font-jost);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-regular);
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-white-fff);
+}
+
+.side-navbar-buttons-all a span{
+    font-family: var(--font-jost);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-regular);
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-black-3);
+}
