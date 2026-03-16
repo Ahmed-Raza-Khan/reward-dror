@@ -25,14 +25,19 @@
     --color-black-2: #222222;
     --color-black-3: #333333;
     --color-black-6: #666666;
+    --color-black-060: #060707;
     --color-gray-707: #707C8B;
     --color-red-ff0: #FF0000;
+    --color-pink-e73: #E7366B;
     --color-white-fff: #FFFFFF;
     --color-white-e1f: #E1F3FC;
     --color-white-d7d: #D7D7D7;
     --color-blue-10: #0077B61A;
     --color-blue-70: #528AF0B2;
+    --color-green-46b: #46B277;
     --color-gray-404: #404A60;
+    --color-gray-4a5: #4A5A6B;
+    --color-gray-75: #4A5A6BBF;
 }
 
 
@@ -88,4 +93,100 @@
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--color-black-3);
+}
+
+
+/* chart cards dashboard section */
+.chart-card-main-headings h3 {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0%;
+    color: var(--color-black-060);
+}
+
+.chart-card-main-headings p {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    color: var(--color-black-060);
+}
+
+.chart-card-bottom-headings span {
+    font-family: var(--font-public-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-regular);
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    color: var(--color-green-46b);
+}
+
+.chart-card-bottom-headings .chart-card-bottom-down {
+    color: var(--color-pink-e73);
+}
+
+.chart-card-bottom-headings text {
+    font-family: var(--font-public-sans);
+    font-weight: var(--font-weight-400);
+    font-style: var(--font-regular);
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    color: var(--color-gray-75);
+}
+
+.main-heading-reward-chart-top {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: var(--color-black-060);
+}
+
+.reward-chart-mainheadings-center span {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-500);
+    font-style: var(--font-medium);
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: var(--color-gray-75);
+}
+
+.reward-chart-mainheadings-center text {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 23px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: var(--color-black-060);
+}
+
+.top-rewards-brand-detail span{
+    font-family: var(--font-public-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: var(--color-gray-4a5);
+}
+
+.top-rewards-brand-detail .span-2-per{
+    font-family: var(--font-public-sans);
+    font-weight: var(--font-weight-600);
+    font-style: var(--font-semibold);
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: var(--color-gray-75);
 }

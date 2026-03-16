@@ -6,6 +6,7 @@
     <title>Reward Dror - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/x-icon" href="assests/images/logo.png">
     <link rel="stylesheet" href="assests/css/dashboard-main.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -88,7 +89,7 @@
 
     <div class="pt-25 flex min-h-screen bg-[#F8F9FA]">  
         <aside class="w-64 bg-white border-r border-gray-100 flex flex-col fixed h-full left-0">
-            <nav class="flex-1 px-4 py-6 space-y-2 side-navbar-buttons-all">
+            <nav class="flex-1 px-0 py-6 space-y-3 side-navbar-buttons-all">
                 <a href="reward-dashboard-main.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
                     <img src="assests/images/dashboard-icon.svg" alt="dashboard" width="20" height="20">
                     <span class="active">Dashboard</span>
@@ -125,89 +126,150 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                             
                 <div class="bg-[#FFFFFF] p-6 rounded-md shadow-sm border border-gray-50 flex flex-col justify-between">
-                    <div>
-                        <h3 class="">Total transactions</h3>
+                    <div class="chart-card-main-headings">
+                        <h3>Total transactions</h3>
                         <p class="text-3xl mt-2">1204</p>
                     </div>
                     <div class="flex items-end justify-between mt-4">
-                        <div class="flex flex-col">
-                            <span class="">16.8% ↑</span>
-                            <span class="text-xs">Since last month</span>
+                        <div class="flex flex-col chart-card-bottom-headings">
+                            <span>16.8% ↑</span>
+                            <text class="text-xs">Since last month</text>
                         </div>
                         <div class="absolute bottom-[370px] left-[380px] w-35 h-10 rounded-md flex items-center justify-center">
-                            <img src="assests/images/SVG-1.svg" alt="">
-                            <!-- <svg class="w-full h-full text-red-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M0 35 L20 25 L40 30 L60 10 L80 20 L100 5" />
-                            </svg> -->
+                            <img src="assests/images/SVG-1.svg" alt="chart-svg">
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-md shadow-sm border border-gray-50 flex flex-col justify-between">
-                    <div>
-                        <h3 class="">Total revenue</h3>
+                    <div class="chart-card-main-headings">
+                        <h3>Total revenue</h3>
                         <p class="text-3xl mt-2">$2156</p>
                     </div>
                     <div class="flex items-end justify-between mt-4">
-                        <div class="flex flex-col">
-                            <span class="">3.51% ↑</span>
-                            <span class="text-xs">Since last month</span>
+                        <div class="flex flex-col chart-card-bottom-headings">
+                            <span>3.51% ↑</span>
+                            <text class="text-xs">Since last month</text>
                         </div>
                         <div class="absolute bottom-[370px] left-[650px] w-35 h-10 rounded-md flex items-center justify-center">
-                            <img src="assests/images/SVG-2.svg" alt="">
-                            <!-- <svg class="w-full h-full text-emerald-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M0 20 L20 30 L40 10 L60 25 L80 15 L100 35" />
-                            </svg> -->
+                            <img src="assests/images/SVG-2.svg" alt="chart-svg">
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-50 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-gray-500 font-medium text-sm">Active rewards count</h3>
-                        <p class="text-3xl font-bold text-gray-800 mt-2">2,120</p>
+                    <div class="chart-card-main-headings">
+                        <h3>Active rewards count</h3>
+                        <p class="text-3xl mt-2">2,120</p>
                     </div>
                     <div class="flex items-end justify-between mt-4">
-                        <div class="flex flex-col">
-                            <span class="text-red-500 font-semibold text-sm">2.87% ↓</span>
-                            <span class="text-gray-400 text-xs">Since last month</span>
+                        <div class="flex flex-col chart-card-bottom-headings">
+                            <span class="chart-card-bottom-down">2.87% ↓</span>
+                            <text class="text-xs">Since last month</text>
                         </div>
-                        <div class="absolute bottom-[370px] left-[910px] w-35 h-10 rounded-md flex items-center justify-center">
-                            <img src="assests/images/SVG-3.svg" alt="">
-                        <!-- <div class="w-20 h-10 bg-red-50 rounded-md flex items-center justify-center"> -->
-                            <!-- <svg class="w-full h-full text-red-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M0 5 L20 15 L40 5 L60 25 L80 10 L100 30" />
-                            </svg> -->
+                        <div class="absolute bottom-[370px] left-[920px] w-35 h-10 rounded-md flex items-center justify-center">
+                            <img src="assests/images/SVG-3.svg" alt="chart-svg">
+
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-50 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-gray-500 font-medium text-sm">Active business API accounts</h3>
-                        <p class="text-3xl font-bold text-gray-800 mt-2">$1,473</p>
+                    <div class="chart-card-main-headings">
+                        <h3>Active business API accounts</h3>
+                        <p class="text-3xl mt-2">$1,473</p>
                     </div>
                     <div class="flex items-end justify-between mt-4">
-                        <div class="flex flex-col">
-                            <span class="text-emerald-500 font-semibold text-sm">9.19% ↑</span>
-                            <span class="text-gray-400 text-xs">Since last month</span>
+                        <div class="flex flex-col chart-card-bottom-headings">
+                            <span>9.19% ↑</span>
+                            <text class="text-xs">Since last month</text>
                         </div>
-                        <div class="w-20 h-10 bg-gray-50 rounded-md flex items-center justify-center">
-                            <svg class="w-full h-full text-indigo-400" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M0 30 L20 10 L40 35 L60 5 L80 25 L100 15" />
-                            </svg>
+                        <div class="absolute bottom-[370px] left-[1190px] w-35 h-10 rounded-md flex items-center justify-center">
+                            <img src="assests/images/SVG-4.svg" alt="chart-svg">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-11 gap-6">
+        
+                <div class="md:col-span-4 bg-white p-0 rounded-[0.5rem] shadow-sm border border-gray-100">
+                    <div class="border-b border-dashed border-gray-300 p-4 mb-6">
+                        <h2 class="text-xl tracking-tight main-heading-reward-chart-top">Top Reward Categories</h2>
+                    </div>
+
+                    <div class="relative flex flex-col items-center">
+                        <div class="relative w-64 h-32 overflow-hidden">
+                            <canvas id="rewardsChart"></canvas>
+                            <div class="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pb-1 reward-chart-mainheadings-center">
+                                <span class="uppercase tracking-widest">Total Unlocks</span>
+                                <text class="text-3xl leading-none">11,685</text>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-x-8 gap-y-5 mt-15 w-full px-2">
+                            <div class="flex items-center justify-between top-rewards-brand-detail">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-[#7168EE]"></div>
+                                    <span>Addidas</span>
+                                </div>
+                                <div class="flex items-center text-green-500 text-xs">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                                    <span class="span-2-per">12.48%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between top-rewards-brand-detail">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-[#963B68]"></div>
+                                    <span>h&m</span>
+                                </div>
+                                <div class="flex items-center text-green-500 text-xs">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                                    <span class="span-2-per">15.58%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between top-rewards-brand-detail">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-[#46B277]"></div>
+                                    <span>Ikea</span>
+                                </div>
+                                <div class="flex items-center text-green-500 text-xs">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                                    <span class="span-2-per">5.23%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between top-rewards-brand-detail">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-[#01D4FF]"></div>
+                                    <span>Waterstc</span>
+                                </div>
+                                <div class="flex items-center text-green-500 text-xs">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                                    <span class="span-2-per">14.15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-white p-4 rounded-[0.5rem] shadow-sm border border-gray-100">
+                    <div class="border-b border-dashed border-gray-300 pb-4 mb-6 flex justify-between items-center">
+                        <h2 class="text-xl font-bold text-gray-800 tracking-tight">Transaction Volume over time</h2>
+                        <div class="flex items-center gap-2 absolute top-[430px] right-[70px]">
+                            <div class="w-2.5 h-2.5 rounded-full bg-[#FF7F32]"></div>
+                            <span class="text-xs font-regular text-[#4A5A6B]">Revenue</span>
+                        </div>
+                    </div>
+
+                    <div class="h-64 w-full">
+                        <canvas id="volumeChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
         </main>
     </div>
 
-    <!-- ihave make the navbar just make now a sidebar which have dashboard image with text button which is default active to show dashboard then rewards image and text then fee image then text then system image then text then businesses image then text then transaction image then text then total transaction box with heading then text number  then green percentage then text then red chart then total revenue card then number text then green percentage then text then green chart then active reward count card then number text then red percentage then text then red chart then active business api accounts card then number text then green percentage then text then gray chart make this in html css and tailwind as shown in given image -->
-    <!-- <div class="pt-24 px-10">
-        <h2 class="text-xl font-bold text-gray-800 mb-4">Navbar has been successfully recreated.</h2>
-        <p class="text-gray-600">This example uses Tailwind CSS via CDN. The dropdowns are configured to show on hover for this demonstration.</p>
-    </div> -->
-
-  </body>
+    <script src="assests/js/pie-chart-dashboard.js"></script>
+</body>
 </html>
