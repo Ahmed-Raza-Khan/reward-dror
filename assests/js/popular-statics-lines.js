@@ -14,7 +14,43 @@ const statsData = [
     { month: 'Dec', income: 35, expense: 25 }
 ];
 
-// const rewardsData =;
+const rewardsData = [
+  { 
+    name: 'Stone House eGift Card',
+    used: 122,
+    points: 132,
+    img: "assests/images/egift-card-1.png",
+    text: 'white'
+  },
+  { 
+    name: 'Starbucks Coffee', 
+    used: 122, 
+    points: 132, 
+    img: "assests/images/egift-card-2.png", 
+    text: 'white' 
+  },
+  { 
+    name: 'Booho eGift Card', 
+    used: 122, 
+    points: 132, 
+    img: "assests/images/egift-card-3.png", 
+    text: 'white' 
+  },
+  { 
+    name: 'Argos eGift Card', 
+    used: 122, 
+    points: 132, 
+    img: "assests/images/egift-card-4.png", 
+    text: 'white' 
+  },
+  { 
+    name: 'Euro Star', 
+    used: 122, 
+    points: 132, 
+    img: "assests/images/egift-card-5.png", 
+    text: 'white' 
+  }
+];
 
 const chartContainer = document.getElementById('chart-container');
 if (chartContainer) {
@@ -39,18 +75,18 @@ if (rewardsList) {
         item.className = "flex items-center justify-between";
         item.innerHTML = `
             <div class="flex items-center gap-3">
-                <div class="w-12 h-8 ${reward.color} rounded-md flex items-center justify-center text-[7px] font-bold ${reward.text === 'white' ? 'text-white' : 'text-gray-500'} uppercase">${reward.label}</div>
+                <img src="${reward.img}" class="w-25 h-15 rounded-md flex items-center justify-center text-[7px] font-bold ${reward.text === 'white' ? 'text-white' : 'text-gray-500'} uppercase"></img>
                 <div>
-                    <h4 class="text-sm font-bold text-gray-800 leading-none mb-1">${reward.name}</h4>
+                    <h4 class="text-[16px] font-medium text-[#060707] leading-none mb-1">${reward.name}</h4>
                     <p class="text-[10px] text-gray-400">${reward.used} Used</p>
                 </div>
             </div>
             <div class="text-right">
                 <div class="flex items-center justify-end gap-1 mb-0.5">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-tighter">Available</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#46B277]"></span>
+                    <span class="text-[14px] text-[#46B277] font-medium tracking-tighter">Available</span>
                 </div>
-                <p class="text-[10px] text-gray-400 font-medium">${reward.points} points</p>
+                <p class="text-[13px] text-[#4A5A6BBF] font-regular font-normal">${reward.points} points</p>
             </div>
         `;
         rewardsList.appendChild(item);
