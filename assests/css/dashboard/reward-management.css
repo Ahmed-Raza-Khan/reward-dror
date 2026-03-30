@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-ibm-plex-sans: 'IBM Plex Sans';
+    --font-nunito-sans: 'Nunito Sans';
+    --font-public-sans: 'Public Sans';
+    --font-jost: 'Jost';
+    --font-poppins: 'Poppins';
+    --font-regular: 'regular';
+    --font-bold: 'Bold';
+    --font-medium: 'Medium';
+    --font-light: 'Light';
+    --font-semibold: 'SemiBold';
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --color-blue: #0077B6;
+    --color-black-0: #000000;
+    --color-black-2: #222222;
+    --color-black-3: #333333;
+    --color-black-6: #666666;
+    --color-black-060: #060707;
+    --color-gray-707: #707C8B;
+    --color-red-ff0: #FF0000;
+    --color-pink-e73: #E7366B;
+    --color-white-fff: #FFFFFF;
+    --color-white-e1f: #E1F3FC;
+    --color-white-d7d: #D7D7D7;
+    --color-blue-10: #0077B61A;
+    --color-blue-70: #528AF0B2;
+    --color-green-46b: #46B277;
+    --color-gray-404: #404A60;
+    --color-gray-4a5: #4A5A6B;
+    --color-gray-75: #4A5A6BBF;
+}
+
+
+.sync-catalog-top-bg {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+    font-family: var(--font-ibm-plex-sans);
+    letter-spacing: 0%;
+}
+
+.filter-dashed-management {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+}
+
+.pagination-hover-background-null {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.pagination-hover-background:hover {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+}
