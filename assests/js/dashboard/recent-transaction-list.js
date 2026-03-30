@@ -1,6 +1,6 @@
 const transactions = [
     {
-        img: "assests/images/egift-card-1.png",
+        img: "../images/egift-card-1.png",
         reward: "Booho eGift Card",
         desc: "120",
         date: "February 14, 2026",
@@ -11,7 +11,7 @@ const transactions = [
         customerId: "Us#011"
     },
     {
-        img: "assests/images/egift-card-2.png",
+        img: "../images/egift-card-2.png",
         reward: "starbucks eGift Card",
         desc: "140",
         date: "January 21, 2026",
@@ -22,7 +22,7 @@ const transactions = [
         customerId: "Us#100"
     },
     {
-        img: "assests/images/egift-card-6.png",
+        img: "../images/egift-card-6.png",
         reward: "Virgin eGift Card",
         desc: "160",
         date: "March 24, 2026",
@@ -33,7 +33,7 @@ const transactions = [
         customerId: "Us#123"
     },
     {
-        img: "assests/images/egift-card-7.png",
+        img: "../images/egift-card-7.png",
         reward: "Tour Gift eGift Card",
         desc: "150",
         date: "April 15, 2025",
@@ -44,7 +44,7 @@ const transactions = [
         customerId: "Us#154"
     },
     {
-        img: "assests/images/egift-card-8.png",
+        img: "../images/egift-card-8.png",
         reward: "Argos eGift Card",
         desc: "120",
         date: "May 13, 2025",
@@ -102,7 +102,7 @@ transactions.forEach(item => {
 
             <td class="px-6 py-4 text-center">
                 <button class="p-2 bg-[#0077B61A] text-sky-500 rounded-lg hover:bg-sky-100 transition-colors">
-                    <img src="assests/images/icon-awesome-eye-open.svg" alt="RewardDror Logo">
+                    <img src="../images/icon-awesome-eye-open.svg" alt="RewardDror Logo">
                 </button>
             </td>
         </tr>

@@ -2,7 +2,7 @@ const rewardsData = [
     {
         id: 1,
         name: "Stone House EGift Card",
-        img: "assests/images/egift-card-1.png", 
+        img: "../images/egift-card-1.png", 
         type: "Fixed", 
         sync: "mm/dd/yyyy", 
         status: "enable"
@@ -10,7 +10,7 @@ const rewardsData = [
     {   
         id: 2,
         name: "Starbucks EGift Card",
-        img: "assests/images/egift-card-2.png",
+        img: "../images/egift-card-2.png",
         type: "Varaible",
         sync: "mm/dd/yyyy",
         status: "disable"
@@ -18,7 +18,7 @@ const rewardsData = [
     {
         id: 3,
         name: "booho egift card",
-        img: "assests/images/egift-card-9.png", 
+        img: "../images/egift-card-9.png", 
         type: "Fixed",
         sync: "mm/dd/yyyy",
         status: "enable"
@@ -26,7 +26,7 @@ const rewardsData = [
     {
         id: 4,
         name: "argos egift card",
-        img: "assests/images/egift-card-8.png", 
+        img: "../images/egift-card-8.png", 
         type: "Fixed",
         sync: "mm/dd/yyyy",
         status: "disable"
@@ -34,7 +34,7 @@ const rewardsData = [
     {
         id: 5,
         name: "euro star",
-        img: "assests/images/egift-card-5.png", 
+        img: "../images/egift-card-5.png", 
         type: "Fixed",
         sync: "mm/dd/yyyy",
         status: "enable"
@@ -67,7 +67,9 @@ tableBody.innerHTML = rewardsData.map(item => `
         </td>
         <td class="px-6 py-4 text-center">
             <button class="p-2 bg-[#0077B61A] text-sky-500 rounded-lg hover:bg-sky-100 transition-colors">
-                <img src="assests/images/icon-awesome-eye-open.svg" alt="RewardDror Logo">
+                <a href="../dashboard/reward-details.html">
+                    <img src="../images/icon-awesome-eye-open.svg" alt="RewardDror Logo">
+                </a>
             </button>
         </td>
     </tr>

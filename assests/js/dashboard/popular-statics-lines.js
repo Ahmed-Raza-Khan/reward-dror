@@ -19,35 +19,35 @@ const rewardsData = [
     name: 'Stone House eGift Card',
     used: 122,
     points: 132,
-    img: "assests/images/egift-card-1.png",
+    img: "../images/egift-card-1.png",
     text: 'white'
   },
   { 
     name: 'Starbucks Coffee', 
     used: 122, 
     points: 132, 
-    img: "assests/images/egift-card-2.png", 
+    img: "../images/egift-card-2.png", 
     text: 'white' 
   },
   { 
     name: 'Booho eGift Card', 
     used: 122, 
     points: 132, 
-    img: "assests/images/egift-card-3.png", 
+    img: "../images/egift-card-3.png", 
     text: 'white' 
   },
   { 
     name: 'Argos eGift Card', 
     used: 122, 
     points: 132, 
-    img: "assests/images/egift-card-4.png", 
+    img: "../images/egift-card-4.png", 
     text: 'white' 
   },
   { 
     name: 'Euro Star', 
     used: 122, 
     points: 132, 
-    img: "assests/images/egift-card-5.png", 
+    img: "../images/egift-card-5.png", 
     text: 'white' 
   }
 ];

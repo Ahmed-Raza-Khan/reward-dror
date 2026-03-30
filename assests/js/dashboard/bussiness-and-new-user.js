@@ -1,17 +1,17 @@
 const businessData = [
-    { id: 'Bus1101', date: '2026-02-01', category: 'Fashion', status: 'Active', color: 'bg-[#2DD5A5]', img: "assests/images/new-business-dot-menu.svg" },
-    { id: 'Bus1102', date: '2025-12-11', category: 'Tourism', status: 'Inactive', color: 'bg-[#F1556C]' , img: "assests/images/new-business-dot-menu.svg" },
-    { id: 'Bus1103', date: '2026-01-21', category: 'Ecommerce', status: 'Pending', color: 'bg-[#F9BC0B]' , img: "assests/images/new-business-dot-menu.svg" },
-    { id: 'Bus1104', date: '2026-01-18', category: 'Sports', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" },
-    { id: 'Bus1114', date: '2026-01-24', category: 'Fashion', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" }
+    { id: 'Bus1101', date: '2026-02-01', category: 'Fashion', status: 'Active', color: 'bg-[#2DD5A5]', img: "../images/new-business-dot-menu.svg" },
+    { id: 'Bus1102', date: '2025-12-11', category: 'Tourism', status: 'Inactive', color: 'bg-[#F1556C]' , img: "../images/new-business-dot-menu.svg" },
+    { id: 'Bus1103', date: '2026-01-21', category: 'Ecommerce', status: 'Pending', color: 'bg-[#F9BC0B]' , img: "../images/new-business-dot-menu.svg" },
+    { id: 'Bus1104', date: '2026-01-18', category: 'Sports', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" },
+    { id: 'Bus1114', date: '2026-01-24', category: 'Fashion', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" }
 ];
 
 const userData = [
-    { usersingimg: "assests/images/user-img-new-1.jpg" , name: 'John Doe', date: '2024-12-14', points: '123 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" } ,
-    { usersingimg: "assests/images/user-img-new-2.jpg" , name: 'Kelly', date: '2024-12-14', points: '453 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" } ,
-    { usersingimg: "assests/images/user-img-new-3.jpg" , name: 'Sara josh', date: '2024-12-14', points: '12 Points', status: 'In Active', color: 'bg-[#F1556C]' , img: "assests/images/new-business-dot-menu.svg" } ,
-    { usersingimg: "assests/images/user-img-new-4.jpg" , name: 'Edward', date: '2024-12-14', points: '157 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" } ,
-    { usersingimg: "assests/images/user-img-new-5.jpg" , name: 'Mary kom', date: '2024-12-14', points: '254 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "assests/images/new-business-dot-menu.svg" } 
+    { usersingimg: "../images/user-img-new-1.jpg" , name: 'John Doe', date: '2024-12-14', points: '123 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" } ,
+    { usersingimg: "../images/user-img-new-2.jpg" , name: 'Kelly', date: '2024-12-14', points: '453 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" } ,
+    { usersingimg: "../images/user-img-new-3.jpg" , name: 'Sara josh', date: '2024-12-14', points: '12 Points', status: 'In Active', color: 'bg-[#F1556C]' , img: "../images/new-business-dot-menu.svg" } ,
+    { usersingimg: "../images/user-img-new-4.jpg" , name: 'Edward', date: '2024-12-14', points: '157 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" } ,
+    { usersingimg: "../images/user-img-new-5.jpg" , name: 'Mary kom', date: '2024-12-14', points: '254 Points', status: 'Active', color: 'bg-[#2DD5A5]' , img: "../images/new-business-dot-menu.svg" } 
 ];
 
 
