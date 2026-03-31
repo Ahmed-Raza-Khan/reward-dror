@@ -59,3 +59,28 @@
 .pagination-hover-background:hover {
     background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
 }
+
+
+/* reward-details.html */
+.main-headings-rewards {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-600);
+    line-height: 44px;
+    letter-spacing: 0%;
+}
+
+.main-headings-detail-rewards {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: var(--font-weight-400);
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.main-button-rewards .main-button-rewards-edit {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.main-button-rewards .main-button-rewards-delete {
+    font-family: var(--font-ibm-plex-sans);
+}
