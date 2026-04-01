@@ -84,38 +84,44 @@ const storedRewards = JSON.parse(localStorage.getItem("rewardsData")) || [];
 
 const tableBody = document.getElementById('reward-table-body');
 
-tableBody.innerHTML = storedRewards.map(item => `
-    <tr class="hover:bg-gray-50 transition">
-        <td class="px-6 py-4">${item.id}</td>
-        
-        <td class="px-6 py-4">
-            <img src="${item.img}" class="w-22 h-14 rounded-md"/>
-        </td>
+function renderTable() {
+    const rewards = JSON.parse(localStorage.getItem("rewardsData")) || [];
 
-        <td class="px-6 py-4">${item.name}</td>
-        <td class="px-6 py-4">${item.type}</td>
-        <td class="px-6 py-4">${item.sync}</td>
+    const tableBody = document.getElementById('reward-table-body');
 
-        <td class="px-6 py-4">
-            <select onchange="updateStatus(${item.id}, this)"
-                class="block w-full text-[13px] rounded-md py-1.5
-                ${item.status === 'enable'
-                    ? 'text-[#21BB60] bg-[#21BB6033] border border-[#21BB60]'
-                    : 'text-[#F15046] bg-[#F1504633] border border-[#F15046]'
-                }">
-                
-                <option value="enable" ${item.status === 'enable' ? 'selected' : ''}>Enabled</option>
-                <option value="disable" ${item.status === 'disable' ? 'selected' : ''}>Disabled</option>
-            </select>
-        </td>
+    tableBody.innerHTML = rewards.map(item => `
+        <tr class="hover:bg-gray-50 transition">
+            <td class="px-6 py-4">${item.id}</td>
+            
+            <td class="px-6 py-4">
+                <img src="${item.img}" class="w-22 h-14 rounded-md"/>
+            </td>
 
-        <td class="px-6 py-4 text-center">
-            <button onclick="viewDetails(${item.id})"
-                class="p-2 bg-[#0077B61A] rounded-lg">
-                <img src="../images/icon-awesome-eye-open.svg">
-            </button>
-        </td>
-    </tr>
-`).join('');
+            <td class="px-6 py-4">${item.name}</td>
+            <td class="px-6 py-4">${item.type}</td>
+            <td class="px-6 py-4">${item.sync}</td>
+
+            <td class="px-6 py-4">
+                <select onchange="updateStatus(${item.id}, this)"
+                    class="block w-full text-[13px] rounded-md py-1.5
+                    ${item.status === 'enable'
+                        ? 'text-[#21BB60] bg-[#21BB6033] border border-[#21BB60]'
+                        : 'text-[#F15046] bg-[#F1504633] border border-[#F15046]'
+                    }">
+                    
+                    <option value="enable" ${item.status === 'enable' ? 'selected' : ''}>Enabled</option>
+                    <option value="disable" ${item.status === 'disable' ? 'selected' : ''}>Disabled</option>
+                </select>
+            </td>
+
+            <td class="px-6 py-4 text-center">
+                <button onclick="viewDetails(${item.id})"
+                    class="p-2 bg-[#0077B61A] rounded-lg">
+                    <img src="../images/icon-awesome-eye-open.svg">
+                </button>
+            </td>
+        </tr>
+    `).join('');
+}
 
 renderTable();

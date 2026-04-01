@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reward Dror - Reward Details</title>
+    <title>Reward Dror - Reward Details Update</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -44,7 +44,7 @@
                 </button>
                 
                 <div class="absolute right-0 top-full mt-0 w-32 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                    <a href="#" class="block px-4 py-5 text-sm hover:bg-gray-50 flex items-center gap-2">
                         <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="UK Flag" class="w-5 h-4 rounded-sm">
                         English (UK)
                     </a>
@@ -129,94 +129,94 @@
         <main class="ml-64 flex-1 p-8">
             <div class="max-w-7xl mx-auto">
                 <div class="bg-white rounded-xl p-7 shadow">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <button onclick="history.back()">
-                                <img src="../images/left-arrow-back.svg" class="w-8 h-7">
-                            </button>
-                            <h1 class="text-4xl ms-2 font-semibold text-[#000000]">Reward Details</h1>
+                    <div class="flex items-center gap-3 mb-6">
+                        <button onclick="history.back()">
+                            <img src="../images/left-arrow-back.svg" class="w-8 h-7">
+                        </button>
+                        <h1 class="text-4xl ms-2 font-semibold text-[#000000]">Update Reward</h1>
+                    </div>
+            
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#707C8B] mb-1 ms-7 translate-y-1.5 bg-white w-25">Reward Name :</label>
+                            <input id="rewardNameLeft" type="text" placeholder="starbucks eGift Card"
+                                class="w-full border border-[#D7D7D7] rounded-full px-4 py-5 text-[13px] text-[#909090] font-regular bg-white focus:bg-white transition">
                         </div>
-
-                        <div class="flex items-center gap-3">
-                            <span class="text-[20px] text-[#000000] font-medium">Status :</span>
-
-                            <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" id="statusToggle" class="sr-only peer">
-                                <div class="w-13 h-8 bg-[#F15046] peer-checked:bg-[#4CAF50] rounded-full peer transition"></div>
-                                <div class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition peer-checked:translate-x-2.5"></div>
-                            </label>
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#707C8B] mb-1 ms-7 translate-y-1.5 bg-white w-25">Reward Name :</label>
+                            <input id="rewardNameRight" type="text" placeholder="starbucks eGift Card"
+                                class="w-full border border-[#D7D7D7] rounded-full px-4 py-5 text-[13px] text-[#909090] font-regular bg-white focus:bg-white transition">
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-6">
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Id :</p>
-                                    <p id="rewardId" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Name :</p>
-                                    <p id="rewardName" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards mb-1">Description :</p>
-                                <p id="rewardDesc" class="text-[#000000] text-[20px] font-regular leading-relaxed main-headings-detail-rewards"></p>
-                            </div>
-
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Type :</p>
-                                    <p id="rewardType" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Denominations :</p>
-                                    <p id="rewardPoints" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Min/Max Amounts :</p>
-                                    <p id="rewardAmount" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Redemption :</p>
-                                    <p id="rewardRedemption" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-6 mt-9 main-button-rewards">
-                                <button class="bg-orange-500 text-[16px] text-white px-7 py-3 rounded-full font-semibold main-button-rewards-edit">
-                                    <a href="reward-details-update.html">
-                                        Edit Rewards
-                                    </a>
-                                </button>
-
-                                <button class="bg-[#FF2828] text-[16px] text-white px-7 py-3 rounded-full font-semibold main-button-rewards-delete">
-                                    Delete This Reward
-                                </button>
-                            </div>
-
+            
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#707C8B] mb-1 ms-7 translate-y-1.5 bg-white w-21">Description :</label>
+                            <textarea id="rewardDesc" rows="5" placeholder="When you give a Starbucks Code, you're giving more than just a gift or a token of appreciation. You're connecting with customers and employees."
+                                class="w-full border border-[#D7D7D7] rounded-3xl px-4 py-5 text-[13px] text-[#909090] font-regular bg-white focus:bg-white resize-none transition leading-relaxed"></textarea>
                         </div>
-
-                        <div class="flex justify-end items-top">
-                            <div class="rounded-md overflow-hidden">
-                                <img id="rewardImage" class="w-[320px] h-[190px] object-cover border border-[#FF4C4C]">
+            
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#707C8B] mb-1 ms-7">Upload Image :</label>
+                            <div id="dropZone" class="drop-zone rounded-3xl flex flex-col items-center justify-center h-[155px] cursor-pointer bg-white relative border border-[#D7D7D7]">
+                                <input type="file" id="imageUpload" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                                <div id="dropContent" class="flex flex-col items-center gap-1 pointer-events-none">
+                                    <img src="../images/drop-and-upload-image-profilce.svg" alt="drop-and-upload">
+                                    <span class="text-[10px] text-[#909090] font-regular mt-1">Drag & Drop Image</span>
+                                </div>
+                                <img id="previewImg" class="hidden absolute inset-0 w-full h-full object-cover rounded-3xl" alt="Preview">
                             </div>
                         </div>
+                    </div>
+            
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-20 mb-8 items-start">
+                        <div>
+                            <label class="block text-[14px] font-bold text-[#707C8B] mb-1 ms-7 translate-y-1.5 bg-white w-33">Min/max amounts :</label>
+                            <input id="rewardAmount" type="text" placeholder="£5 to £150" class="w-full border border-[#D7D7D7] rounded-full px-4 py-5 text-[13px] text-[#909090] font-regular bg-white focus:bg-white transition">
+                        </div>
+            
+                        <div class="translate-y-3 ms-47">
+                            <p class="text-[14px] font-bold text-[#707C8B] mb-2">Status:</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[13px] text-[#909090] font-regular">Enable :</span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="statusToggle" class="sr-only toggle-checkbox" checked>
+                                    <div class="toggle-label w-11 h-6 bg-red-400 rounded-full transition-colors duration-200 relative">
+                                        <div class="toggle-dot absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform duration-200"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+            
+                        <div class="-translate-x-10 mt-6">
+                            <p class="text-[14px] font-bold text-[#707C8B] mb-2">Featured Reward :</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[13px] text-[#909090] font-regular">Featured Reward :</span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="featuredToggle" class="sr-only toggle-checkbox" checked>
+                                    <div class="toggle-label w-11 h-6 bg-red-400 rounded-full transition-colors duration-200 relative">
+                                        <div class="toggle-dot absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform duration-200"></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="flex gap-4 main-button-rewards-update">
+                        <button onclick="saveChanges()"
+                            class="main-button-rewards-update-save active:scale-95 text-[#FFFFFF] text-[16px] font-semibold px-7 py-3 rounded-full transition-all duration-150 shadow-sm">
+                            Save Changes
+                        </button>
+                        <button onclick="deleteReward()"
+                            class="main-button-rewards-update-delete bg-[#FF2828] active:scale-95 text-[#FFFFFF] text-[16px] font-semibold px-7 py-3 rounded-full transition-all duration-150 shadow-sm">
+                            Delete This Reward
+                        </button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-
-    <script src="../js/dashboard/reward-management-details.js"></script>
+    <script src="../js/dashboard/reward-management-details-update.js"></script>
 </body>
 </html>

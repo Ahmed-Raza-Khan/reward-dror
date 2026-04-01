@@ -61,7 +61,7 @@
 }
 
 
-/* reward-details.html */
+/* reward-details.html page */
 .main-headings-rewards {
     font-family: var(--font-ibm-plex-sans);
     font-weight: var(--font-weight-600);
@@ -83,4 +83,17 @@
 
 .main-button-rewards .main-button-rewards-delete {
     font-family: var(--font-ibm-plex-sans);
+}
+
+
+/* update reward page */
+.main-button-rewards-update .main-button-rewards-update-save {
+    font-family: var(--font-ibm-plex-sans);
+    letter-spacing: 0%;
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+}
+
+.main-button-rewards-update .main-button-rewards-update-delete {
+    font-family: var(--font-ibm-plex-sans);
+    letter-spacing: 0%;
 }
