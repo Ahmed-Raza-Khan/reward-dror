@@ -97,3 +97,20 @@
     font-family: var(--font-ibm-plex-sans);
     letter-spacing: 0%;
 }
+
+.main-button-rewards-update-popup-ok {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.main-button-rewards-update-popup-ok-update-text {
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.main-button-rewards-update-popup-ok-update-heading {
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.main-button-rewards-update-popup-ok-warning-text {
+    font-family: var(--font-ibm-plex-sans);
+}

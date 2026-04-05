@@ -201,12 +201,124 @@
                             </div>
                         </div>
                     </div>
+
+                    <div id="successModal" class="fixed inset-0 z-50 hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+                        <div class="relative bg-white rounded-md p-8 w-[450px] text-center shadow-2xl">
+                            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <div class="flex justify-center mb-2">
+                                <div class="mb-3">
+                                    <img src="../images/password-update-tick.png" alt="Success" class="w-28 h-28">
+                                </div>
+                            </div>
+                            <h2 class="text-[#000000] text-[26px] font-bold mb-3">Successful</h2>
+                            <p class="text-center text-[#000000] text-[16px] font-regular mb-6 capitalize main-button-rewards-update-popup-ok-update-text">
+                                Reward has been updated <br> successfully
+                            </p>
+                            <button onclick="document.getElementById('successModal').classList.add('hidden')"
+                                class="main-button-rewards-update-popup-ok text-[#FFFFFF] text-[16px] font-semibold px-2 py-3 rounded-full w-40">
+                                Ok
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="disableModal" class="fixed inset-0 z-50 hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+                        <div class="relative bg-white rounded-md p-8 w-[400px] text-center shadow-2xl">
+                            <button id="closeDisableModal" class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <div class="flex justify-center mb-4">
+                                <div class="mb-3">
+                                    <img src="../images/update-warning.png" alt="Success" class="w-28 h-28">
+                                </div>
+                            </div>
+                            <h2 class="text-[#000000] text-[26px] font-bold mb-2">Disable Reward</h2>
+                            <p class="text-center text-[#000000] text-[16px] font-regular capitalize mb-6 main-button-rewards-update-popup-ok-warning-text">
+                                Are you sure you want to Disable <br>this reward?
+                            </p>
+
+                            <div class="flex justify-center gap-3">
+                                <button id="confirmDisable"
+                                    class="main-button-rewards-update-popup-ok text-[#FFFFFF] text-[16px] font-semibold px-2 py-3 w-40 rounded-full">
+                                    Yes
+                                </button>
+
+                                <button id="cancelDisable"
+                                    class="border border-[#F15046] text-[#F15046] text-[16px] font-semibold px-2 py-3 rounded-full w-40">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="successModal" class="fixed inset-0 z-50 hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+                        <div class="relative bg-white rounded-md p-8 w-[450px] text-center shadow-2xl">
+                            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <div class="flex justify-center mb-2">
+                                <div class="mb-3">
+                                    <img src="../images/password-update-tick.png" alt="Success" class="w-28 h-28">
+                                </div>
+                            </div>
+                            <h2 class="text-[#000000] text-[26px] font-bold mb-3">Successful</h2>
+                            <p id="successMessage" class="text-center text-[#000000] text-[16px] font-regular mb-6 capitalize main-button-rewards-update-popup-ok-update-text">
+                                Rewards has been disable successfully 
+                            </p>
+                            <button onclick="document.getElementById('successModal').classList.add('hidden')"
+                                class="main-button-rewards-update-popup-ok text-[#FFFFFF] text-[16px] font-semibold px-2 py-3 rounded-full w-40">
+                                Ok
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="enableModal" class="fixed inset-0 z-50 hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+                        <div class="relative bg-white rounded-md p-8 w-[400px] text-center shadow-2xl">
+                            <button id="closeEnableModal" class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <div class="flex justify-center mb-4">
+                                <div class="mb-3">
+                                    <img src="../images/update-warning.png" alt="Success" class="w-28 h-28">
+                                </div>
+                            </div>
+                            <h2 class="text-[#000000] text-[26px] font-bold mb-2">Enable Reward</h2>
+                            <p class="text-center text-[#000000] text-[16px] font-regular mb-6 capitalize main-button-rewards-update-popup-ok-warning-text">
+                                Are you sure you want to enable <br>this reward?
+                            </p>
+
+                            <div class="flex justify-center gap-3">
+                                <button id="confirmEnable"
+                                    class="main-button-rewards-update-popup-ok text-[#FFFFFF] text-[16px] font-semibold px-2 py-3 w-40 rounded-full shadow-lg transition-transform active:scale-95">
+                                    Yes
+                                </button>
+                                <button id="cancelEnable"
+                                    class="border border-[#F15046] text-[#F15046] text-[16px] font-semibold px-2 py-3 rounded-full w-40 transition-transform active:scale-95">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
             
                     <div class="flex gap-4 main-button-rewards-update">
                         <button onclick="saveChanges()"
                             class="main-button-rewards-update-save active:scale-95 text-[#FFFFFF] text-[16px] font-semibold px-7 py-3 rounded-full transition-all duration-150 shadow-sm">
                             Save Changes
                         </button>
+                        
                         <button onclick="deleteReward()"
                             class="main-button-rewards-update-delete bg-[#FF2828] active:scale-95 text-[#FFFFFF] text-[16px] font-semibold px-7 py-3 rounded-full transition-all duration-150 shadow-sm">
                             Delete This Reward
@@ -218,5 +330,6 @@
     </div>
 
     <script src="../js/dashboard/reward-management-details-update.js"></script>
+    <script src="../js/dashboard/reaward-update-popups/reaward-update-popup-.js"></script>
 </body>
 </html>

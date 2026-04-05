@@ -4,6 +4,13 @@ const previewImg = document.getElementById("previewImg");
 const dropContent = document.getElementById("dropContent");
 const dropZone = document.getElementById("dropZone");
 const imageUpload = document.getElementById("imageUpload");
+const statusToggle = document.getElementById("statusToggle");
+const featuredToggle = document.getElementById("featuredToggle");
+
+const successModal = document.getElementById("successModal");
+const disableModal = document.getElementById("disableModal");
+const enableModal = document.getElementById("enableModal");
+const successMessage = document.getElementById("successMessage");
 
 const data = JSON.parse(localStorage.getItem("rewardDetails"));
 
@@ -12,9 +19,6 @@ if (data) {
     document.getElementById("rewardNameRight").value = data.name || "";
     document.getElementById("rewardDesc").value = data.description || "";
     document.getElementById("rewardAmount").value = data.amount || "";
-
-    const statusToggle = document.getElementById("statusToggle");
-    const featuredToggle = document.getElementById("featuredToggle");
 
     statusToggle.checked = data.status === "enable";
     featuredToggle.checked = data.featured !== false;
@@ -25,7 +29,6 @@ if (data) {
 
 function updateToggleColor(toggle) {
     if (!toggle) return;
-
     const label = toggle.nextElementSibling;
     if (!label) return;
 
@@ -38,49 +41,64 @@ function updateToggleColor(toggle) {
     }
 }
 
-document.getElementById("statusToggle")?.addEventListener("change", function () {
-    updateToggleColor(this);
+if (statusToggle) {
+    statusToggle.addEventListener("change", function () {
+        if (this.checked) {
+            this.checked = false; 
+            updateToggleColor(this);
+            enableModal?.classList.remove("hidden");
+        } else {
+            this.checked = true;
+            updateToggleColor(this);
+            disableModal?.classList.remove("hidden");
+        }
+    });
+}
+
+document.getElementById("confirmEnable")?.addEventListener("click", () => {
+    enableModal.classList.add("hidden");
+    statusToggle.checked = true;
+    updateToggleColor(statusToggle);
+    saveStatus("enable");
+
+    successMessage.innerHTML = "Rewards has been enabled <br> successfully";
+    successModal.classList.remove("hidden");
 });
 
-document.getElementById("featuredToggle")?.addEventListener("change", function () {
-    updateToggleColor(this);
+document.getElementById("cancelEnable")?.addEventListener("click", () => {
+    enableModal.classList.add("hidden");
 });
 
-imageUpload?.addEventListener("change", function () {
-    const file = this.files[0];
-    if (file) showPreview(file);
+document.getElementById("closeEnableModal")?.addEventListener("click", () => {
+    enableModal.classList.add("hidden");
 });
 
-dropZone?.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropZone.classList.add("dragover");
+document.getElementById("confirmDisable")?.addEventListener("click", () => {
+    disableModal.classList.add("hidden");
+    statusToggle.checked = false;
+    updateToggleColor(statusToggle);
+    saveStatus("disable");
+
+    successMessage.innerHTML = "Rewards has been disabled <br> successfully";
+    successModal.classList.remove("hidden");
 });
 
-dropZone?.addEventListener("dragleave", () => {
-    dropZone.classList.remove("dragover");
+document.getElementById("cancelDisable")?.addEventListener("click", () => {
+    disableModal.classList.add("hidden");
 });
 
-dropZone?.addEventListener("drop", (e) => {
-    e.preventDefault();
-    dropZone.classList.remove("dragover");
-
-    const file = e.dataTransfer.files[0];
-
-    if (file && file.type.startsWith("image/")) {
-        showPreview(file);
-    }
+document.getElementById("closeDisableModal")?.addEventListener("click", () => {
+    disableModal.classList.add("hidden");
 });
 
-function showPreview(file) {
-    if (!file.type.startsWith("image/")) return;
+function saveStatus(statusValue) {
+    const current = JSON.parse(localStorage.getItem("rewardDetails")) || {};
+    current.status = statusValue;
+    localStorage.setItem("rewardDetails", JSON.stringify(current));
 
-    const reader = new FileReader();
-
-    reader.onload = (e) => {
-        uploadedImage = e.target.result;
-    };
-
-    reader.readAsDataURL(file);
+    let rewards = JSON.parse(localStorage.getItem("rewardsData")) || [];
+    rewards = rewards.map(item => item.id === current.id ? { ...item, status: statusValue } : item);
+    localStorage.setItem("rewardsData", JSON.stringify(rewards));
 }
 
 function saveChanges() {
@@ -91,43 +109,60 @@ function saveChanges() {
         name: document.getElementById("rewardNameLeft").value,
         description: document.getElementById("rewardDesc").value,
         amount: document.getElementById("rewardAmount").value,
-        status: document.getElementById("statusToggle").checked ? "enable" : "disable",
-        featured: document.getElementById("featuredToggle").checked,
+        status: statusToggle.checked ? "enable" : "disable",
+        featured: featuredToggle.checked,
         img: uploadedImage || current.img,
     };
 
     localStorage.setItem("rewardDetails", JSON.stringify(updated));
 
     let rewards = JSON.parse(localStorage.getItem("rewardsData")) || [];
-
-    rewards = rewards.map(item => {
-        if (item.id === updated.id) {
-            return { ...item, ...updated };
-        }
-        return item;
-    });
-
+    rewards = rewards.map(item => item.id === updated.id ? { ...item, ...updated } : item);
     localStorage.setItem("rewardsData", JSON.stringify(rewards));
 
-    alert("Changes saved successfully!");
-    location.reload();
+    successMessage.innerHTML = "Reward has been updated <br> successfully";
+    successModal.classList.remove("hidden");
+
+    setTimeout(() => {
+        successModal.classList.add("hidden");
+        window.location.href = "reward-details.html";
+    }, 1500);
 }
 
 function deleteReward() {
     if (!confirm("Are you sure you want to delete this reward?")) return;
 
     const current = JSON.parse(localStorage.getItem("rewardDetails"));
-
     if (current) {
         let rewards = JSON.parse(localStorage.getItem("rewardsData")) || [];
-
         rewards = rewards.filter(item => item.id !== current.id);
-
         localStorage.setItem("rewardsData", JSON.stringify(rewards));
         localStorage.removeItem("rewardDetails");
     }
-
     history.back();
 }
 
-console.log(data);
+imageUpload?.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) showPreview(file);
+});
+
+function showPreview(file) {
+    if (!file.type.startsWith("image/")) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        uploadedImage = e.target.result;
+        previewImg.src = uploadedImage;
+        previewImg.classList.remove("hidden");
+        dropContent.classList.add("hidden");
+    };
+    reader.readAsDataURL(file);
+}
+
+document.getElementById("closeModal")?.addEventListener("click", () => {
+    successModal.classList.add("hidden");
+});
+
+featuredToggle?.addEventListener("change", function () {
+    updateToggleColor(this);
+});
