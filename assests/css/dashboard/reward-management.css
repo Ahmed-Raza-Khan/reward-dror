@@ -114,3 +114,24 @@
 .main-button-rewards-update-popup-ok-warning-text {
     font-family: var(--font-ibm-plex-sans);
 }
+
+
+/* fee configration section */
+.fee-configration-main-heading {
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.main-button-background-fee-config {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);
+    font-family: var(--font-ibm-plex-sans);
+}
+
+/* .main-button-background-fee-config { background-color: #0077B6; } */
+/* .pagination-hover-background:hover { background-color: #0077B6; } */
+/* .pagination-hover-background-null { background-color: #0077B6; } */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
