@@ -134,15 +134,15 @@
                     <div class="flex flex-wrap items-end gap-4 mb-4">
                         <div class="relative flex-1 min-w-[200px]">
                             <label class="absolute -top-2.5 left-4 bg-[#FFFFFF] px-1 text-[14px] font-bold text-[#707C8B] z-10 fee-configration-main-heading">Fee Percentage</label>
-                            <input type="text" value="10 %" class="w-full px-4 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-[#FFFFFF] outline-none text-[13px] text-[#8E8F90] font-regular fee-configration-main-heading">
+                            <input id="feeInput" type="text" value="10 %" class="w-full px-4 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-[#FFFFFF] outline-none text-[13px] text-[#8E8F90] font-regular fee-configration-main-heading">
                         </div>
 
                         <div class="relative flex-1 min-w-[200px]">
                             <label class="absolute -top-2.5 left-4 bg-[#FFFFFF] px-1 text-[14px] font-bold text-[#707C8B] z-10 fee-configration-main-heading">Min/max validation</label>
-                            <input type="text" value="10 to 150 euro" class="w-full px-4 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-[#FFFFFF] outline-none text-[13px] text-[#8E8F90] font-regular fee-configration-main-heading">
+                            <input id="validationInput" type="text" value="10 to 150 euro" class="w-full px-4 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-[#FFFFFF] outline-none text-[13px] text-[#8E8F90] font-regular fee-configration-main-heading">
                         </div>
 
-                        <button class="main-button-background-fee-config text-white text-[18px] font-semibold py-3 px-8 rounded-full transition duration-200">
+                        <button onclick="saveFeeChanges()" class="main-button-background-fee-config text-white text-[18px] font-semibold py-3 px-8 rounded-full transition duration-200">
                             Save Changes
                         </button>
                         <button onclick="toggleModal()" class="bg-[#E2F7FF33] border border-[#0077B680] text-[#0077B6] font-semibold py-3 px-8 rounded-full transition duration-200">
@@ -249,33 +249,46 @@
                                     <div class="bg-[#0077B6] p-2 rounded-full mt-1">
                                         <img src="../images/fee-location-icon.svg" class="h-4 w-4" alt="location">
                                     </div>
-                                    <p class="text-sm text-gray-600 leading-tight">Geographic restrictions apply. Review the Terms for details.</p>
+                                    <p class="text-[13px] text-[#404A60] font-medium leading-tight mt-2">Geographic restrictions apply. Review the Terms for details.</p>
                                 </div>
-                                <div class="text-sm text-gray-500 space-y-4 mb-6">
+                                <div class="text-[15px] text-[#333333] font-regular space-y-4 mb-6">
                                     <p>
                                         When you give a Starbucks Code, you're giving more than just a gift or a token of appreciation. 
                                         You're connecting with customers and employees by providing them something that's practical 
                                         and meaningful from a widely-recognized brand. 
-                                        <span class="text-red-500 cursor-pointer">.... Readmore</span>
+                                        <span class="text-[15px] text-[#FF7F32] font-medium cursor-pointer">.... Readmore</span>
                                     </p>
                                 </div>
-                                <div class="flex items-center gap-3 mb-8">
-                                    <input type="checkbox" id="terms" class="w-5 h-5 accent-orange-500 cursor-pointer">
-                                    <label for="terms" class="text-sm text-gray-700">I Agree with <span class="text-blue-500 underline cursor-pointer">terms & Condition</span></label>
+                                <div class="flex items-center gap-3 mb-8 fee-configration-main-tick-fee">
+                                    <input type="checkbox" id="terms" class="w-5 h-5 accent-[#FF7F32] cursor-pointer">
+                                    <label for="terms" class="text-[17px] text-[#333333] font-regular">I Agree with <span class="text-[17px] text-[#0077B6] font-semibold underline cursor-pointer">terms & Condition</span></label>
                                 </div>
-                                <button class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 rounded-full flex items-center justify-center gap-2 font-medium transition duration-200">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/217/217853.png" alt="coin" class="w-5 h-5">
-                                    Unlock with 104 points
+                                <button class="w-75 text-[18px] text-[#FFFFFF] font-semibold py-4 rounded-full flex items-center justify-center gap-2 transition duration-200 fee-configration-point-coin-button">
+                                    <img src="../images/fee-coin-button.png" alt="coin" class="w-7 h-7">
+                                    Unlock with 104 points 
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden flex items-center justify-center p-4 main-button-rewards-update-popup-ok-update-text">
+                <div class="bg-white rounded-md p-8 max-w-sm w-full text-center shadow-2xl relative">
+                    <button onclick="closeSuccessModal()" class="absolute top-1 right-4 text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
+                    <div class="w-25 h-25 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="../images/password-update-tick.png" alt="tick">
+                    </div>
+                    <h3 class="text-[26px] font-semibold text-[#000000] mb-2">Successful </h3>
+                    <p class="text-[#000000] text-[16px] font-regular mb-6">Fee Configuration has been <br>updated Succesfully</p>
+                    <button onclick="closeSuccessModal()" class="w-50 py-3 rounded-full text-white font-semibold text-[16px] hover:opacity-90 transition shadow-lg main-button-rewards-update-popup-ok">
+                        Ok
+                    </button>
+                </div>
+            </div>
         </main>
     </div>
 
-    <!-- make this preview screen in html css and tailwind first is preview screen heading then image preview on left side then minus button to minus number with background color then input of points with text and number only bottom line is visible then plus button to add number then points with border color and text color 1st row have 3 circle with number text of point then 2nd row have 2 circle with number and text of point when we click any circle it will add the number in the input as plus then in front of it is main heading then redemption heading and its text then price text then horizontal line then location icon with blue background then infront of it is text then description text then readmore with color red then checkbox with tick and agree text of terms and condition aith underline then button with background color and its coin image inside then its text and on right top add close button image to close the preview screen make as shown in given image if js needed use it and when i click on preview screen button it will open the preview screen -->
 
     <script src="../js/dashboard/fee-configrations/fee-configration-data.js"></script>
     <script src="../js/dashboard/fee-configrations/fee-configration-modal-screen-preview.js"></script>
