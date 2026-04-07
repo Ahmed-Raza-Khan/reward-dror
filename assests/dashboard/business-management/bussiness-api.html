@@ -1,0 +1,203 @@
+-<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reward Dror - Reward Details Update</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assests/images/logo.png">
+    <link rel="stylesheet" href="/assests/css/dashboard/dashboard-main.css">
+    <link rel="stylesheet" href="/assests/css/dashboard/reward-management.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="bg-[#E2F7FF] h-[100px] flex items-center p-4 px-6 fixed top-0 left-0 w-full z-10">
+        <div class="flex items-center gap-3">
+            <img src="/assests/images/navbar-logo-img-main.png" alt="RewardDror Logo" class="rounded-lg shadow-inner" width="62" height="62">
+            <a href="../reward-dashboard-main.html">
+                <h1 class="text-2xl left-logo-heading">
+                    <span class="text-[#0077B6]">Reward</span><span class="text-[#FF7F32]">Dror</span>
+                </h1>
+            </a>
+        </div>
+
+        <div class="flex-grow flex justify-center ml-10">
+            <div class="relative w-full max-w-[600px]">
+                <input type="text" placeholder="Search rewards, businesses, transactions…" class="w-full bg-[#FFFFFF] text-[#404A60] placeholder:text-[#404A60] border border-[#00000000] rounded-full h-13 pl-6 pr-14 focus:outline-none focus:ring-1 focus:ring-[#000000333]">
+                
+                <button class="absolute right-[15px] top-[5px] h-[40px] w-[40px] text-white rounded-full flex items-center justify-center search-icon-back-nav">
+                    <a href="reward-dashboard-main.html">
+                        <img src="/assests/images/search-icon-nav.svg" alt="search" width="18" height="18">
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6 ml-auto">            
+            <div class="relative group bg-[#FFFFFF] p-3 rounded-2xl button-language-all">
+                <button class="flex items-center gap-2.5 focus:outline-none">
+                    <img src="/assests/images/flag-country.png" alt="US Flag" class="w-7 h-7 rounded">
+                    English
+                    <img src="/assests/images/down arrow-lang-user.svg" alt="arrow down" class="w-3 h-3">
+                </button>
+                
+                <div class="absolute right-0 top-full mt-0 w-32 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
+                    <a href="#" class="block px-4 py-5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="UK Flag" class="w-5 h-4 rounded-sm">
+                        English (UK)
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Español
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/pk.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Pakistan
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/sa.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Saudia Arabia
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/tr.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Turkey
+                    </a>
+                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                        <img src="https://flagicons.lipis.dev/flags/4x3/ir.svg" alt="Spain Flag" class="w-5 h-4 rounded-sm">
+                        Iran
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="flex items-center gap-3 focus:outline-none profile-user-all">
+                    <img src="/assests/images/profile-image-men.png" alt="Profile of Bella Edward" class="w-13 h-13 rounded-full border-2 border-[#DC6C09] shadow-md">
+                    
+                    <span class="flex items-center gap-1.5">
+                        Bella Edward
+                        <img src="/assests/images/down arrow-lang-user.svg" alt="arrow down" class="w-3 h-3">
+                    </span>
+                </button>
+                
+                <div class="absolute right-0 top-full mt-0 w-40 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Your Profile</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Settings</a>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="../../login.html" class="block px-4 py-2.5 text-sm text-red-600 hover:bg-gray-50">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-19 flex min-h-screen bg-[#F8F9FA]">
+        <aside class="w-64 bg-white border-r border-gray-100 flex flex-col fixed h-full left-0">
+            <nav class="flex-1 px-0 py-6 space-y-3 side-navbar-buttons-all">
+                <a href="../reward-dashboard-main.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="/assests/images/dashboard-dark-icon.svg" alt="dashboard" width="20" height="20">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="../reward-management.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="/assests/images/rewards-menagement-icon.svg" alt="reawards" width="23" height="23">
+                    <span>Rewards Management</span>
+                </a>
+
+                <a href="../fee-configration.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="/assests/images/fee-configuration-icon.svg" alt="fee" width="23" height="23">
+                    <span>Fee Configuration</span>
+                </a>
+
+                <a href="../system-settings.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="/assests/images/system-settings-icon.svg" alt="system" width="23" height="23">
+                    <span>System Settings</span>
+                </a>
+
+                <a href="bussiness-api.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
+                    <img src="/assests/images/bussiness-api-light.svg" alt="bussiness" width="23" height="23">
+                    <span class="active">Business API</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="/assests/images/transaction-icon.svg" alt="transaction" width="23" height="23">
+                    <span>Transactions</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="ml-64 flex-1 p-8 business-api-main-heading">
+            <div class="max-w-7xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-50">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-[35px] font-medium text-[#333333]">Business API Management</h2>
+                    <button class="main-button-background-fee-config text-white px-11 py-3 rounded-full text-[18px] font-semibold shadow-md hover:opacity-90 transition">
+                        <a href="add-business-account.html">Add New Business</a>
+                    </button>
+                </div>
+
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[#000000] text-[16px] font-regular">Show</span>
+                        <div class="relative">
+                            <select class="appearance-none border border-[#FF7F32] rounded-md px-4 py-1 pr-5 text-[14px] font-regular text-[#000000] focus:outline-none">
+                                <option>5</option>
+                                <option>10</option>
+                            </select>
+                            <div class="absolute right-2 top-6 -translate-y-1/2 pointer-events-none">
+                                <svg class="w-4 h-4 text-[#000000]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <input type="text" id="businessSearch" placeholder="Search" class="pl-4 pr-10 py-2 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7F32] w-54">
+                            <span class="absolute right-3 top-2.5 text-[#000000]">
+                                <img src="/assests/images/search-icon-nav-dark.svg" alt="search">
+                            </span>
+                        </div>
+                        <button class="main-button-background-fee-config p-3 rounded-md text-white">
+                            <img src="/assests/images/search-filter-dashed-management.png" alt="filtre" class="w-7 h-5">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full border-separate border-spacing-y-4">
+                        <thead>
+                            <tr class="text-left text-[14px] font-regular text-[#000000] capitalized">
+                                <th class="px-6">S.NO</th>
+                                <th class="px-6">Company Name</th>
+                                <th class="px-6">Contact Email</th>
+                                <th class="px-6">Status</th>
+                                <th class="px-6">API Key Status</th>
+                                <th class="px-6">Created Date</th>
+                                <th class="px-6">Last Activity</th>
+                                <th class="px-6">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="businessTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="bg-white p-1 flex items-center justify-between">
+                    <p class="text-[#000000] text-[16px] font-regular">Showing 1 to 10 from 60 entries</p>
+                    <div class="flex items-center border border-gray-100">
+                        <button class="px-5 py-3 rounded text-[16px] text-medium pagination-hover-background hover:text-[#FFFFFF]">Previous</button>
+                            <a href="bussiness-api.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-white pagination-hover-background-null">1</button></a>
+                                <span class="px-2 text-[#000000]">|</span>
+                            <a href="bussiness-api.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-[#000000] hover:text-[#FFFFFF] pagination-hover-background">2</button></a>
+                                <span class="px-2 text-[#000000]">|</span>
+                            <a href="bussiness-api.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-[#000000] hover:text-[#FFFFFF] pagination-hover-background">3</button></a>
+                                <span class="px-2 text-[#000000]">|</span>
+                        <button class="px-5 py-3 rounded text-[16px] text-medium pagination-hover-background hover:text-[#FFFFFF]">Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="/assests/js/dashboard/business-api/business-api-table.js"></script>
+</body>
+</html>
