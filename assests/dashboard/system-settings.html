@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reward Dror - Reward Details</title>
+    <title>Reward Dror - Reward Details Update</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -44,7 +44,7 @@
                 </button>
                 
                 <div class="absolute right-0 top-full mt-0 w-32 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="#" class="block px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-2">
+                    <a href="#" class="block px-4 py-5 text-sm hover:bg-gray-50 flex items-center gap-2">
                         <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="UK Flag" class="w-5 h-4 rounded-sm">
                         English (UK)
                     </a>
@@ -99,19 +99,19 @@
                     <span>Dashboard</span>
                 </a>
 
-                <a href="reward-management.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
-                    <img src="../images/reward-management-light-icon.svg" alt="reawards" width="23" height="23">
-                    <span class="active">Rewards Management</span>
+                <a href="reward-management.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                    <img src="../images/rewards-menagement-icon.svg" alt="reawards" width="23" height="23">
+                    <span>Rewards Management</span>
                 </a>
 
-                <a href="../dashboard/fee-configration.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="fee-configration.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="../images/fee-configuration-icon.svg" alt="fee" width="23" height="23">
                     <span>Fee Configuration</span>
                 </a>
 
-                <a href="system-settings.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
-                    <img src="../images/system-settings-icon.svg" alt="system" width="23" height="23">
-                    <span>System Settings</span>
+                <a href="system-settings.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
+                    <img src="../images/system-setting-light.svg" alt="system" width="23" height="23">
+                    <span class="active">System Settings</span>
                 </a>
 
                 <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
@@ -127,96 +127,75 @@
         </aside>
 
         <main class="ml-64 flex-1 p-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="bg-white rounded-xl p-7 shadow">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <button onclick="history.back()">
-                                <img src="../images/left-arrow-back.svg" class="w-8 h-7">
-                            </button>
-                            <h1 class="text-4xl ms-2 font-semibold text-[#000000]">Reward Details</h1>
+            <div class="max-w-7xl mx-auto bg-white p-12 rounded-lg shadow-sm border border-gray-100 system-settings-main-heading">
+                <h1 class="text-[35px] font-medium text-[#333333] mb-8">System Settings</h1>
+                <div class="border-t-custom mb-10"></div>
+
+                <div class="mb-12">
+                    <h2 class="text-[26px] font-medium text-[#1471B0] mb-8">Language Settings :</h2>
+                    <div class="relative w-full max-w-sm">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-10">Choose languages:</label>
+                        <select class="w-full px-5 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-white outline-none text-[14px] text-[#909090] font-regular">
+                            <option value="en-es-fr" selected>English , Spanish , French</option>
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                        </select>
+                        <span class="dropdown-arrow">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="border-t-custom mb-10"></div>
+                <div class="mb-12">
+                    <h2 class="text-[26px] font-medium text-[#1471B0] mb-8">Catalog Sync Frequency :</h2>
+
+                    <div class="relative w-full max-w-sm">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-10">Sync Frequency :</label>
+                        <select class="w-full px-5 py-4 border border-[#D7D7D7] hover:border-[#0077B6] rounded-full bg-white outline-none text-[14px] text-[#909090] font-regular">
+                            <option value="2-hours" selected>Every 2 Hours</option>
+                            <option value="1-hour">Every 1 Hour</option>
+                            <option value="4-hours">Every 4 Hours</option>
+                            <option value="6-hours">Every 6 Hours</option>
+                            <option value="12-hours">Every 12 Hours</option>
+                            <option value="24-hours">Daily</option>
+                        </select>
+                        <span class="dropdown-arrow">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="border-t-custom mb-10"></div>
+                <div class="mb-16">
+                    <h2 class="text-[26px] font-medium text-[#1471B0] mb-10">API Rate Limits :</h2>
+                    <div class="flex flex-wrap gap-8">
+                        <div class="relative flex-1 min-w-[300px] max-w-md">
+                            <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-10">Max Per Minute</label>
+                            <input type="number" placeholder="100" class="input-box text-[14px] text-[#909090] font-regular">
                         </div>
-
-                        <div class="flex items-center gap-3">
-                            <span class="text-[20px] text-[#000000] font-medium">Status :</span>
-
-                            <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" id="statusToggle" class="sr-only peer">
-                                <div class="w-13 h-8 bg-[#F15046] peer-checked:bg-[#4CAF50] rounded-full peer transition"></div>
-                                <div class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition peer-checked:translate-x-2.5"></div>
-                            </label>
+                        <div class="relative flex-1 min-w-[300px] max-w-md">
+                            <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-10">Max Per Hour</label>
+                            <input type="number" placeholder="500" class="input-box text-[14px] text-[#909090] font-regular">
                         </div>
                     </div>
+                </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-6">
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Id :</p>
-                                    <p id="rewardId" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Name :</p>
-                                    <p id="rewardName" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards mb-1">Description :</p>
-                                <p id="rewardDesc" class="text-[#000000] text-[20px] font-regular leading-relaxed main-headings-detail-rewards"></p>
-                            </div>
-
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Reward Type :</p>
-                                    <p id="rewardType" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Denominations :</p>
-                                    <p id="rewardPoints" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-10">
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Min/Max Amounts :</p>
-                                    <p id="rewardAmount" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-
-                                <div>
-                                    <p class="text-[#666666] text-[18px] font-semibold main-headings-rewards">Redemption :</p>
-                                    <p id="rewardRedemption" class="font-regular text-[20px] text-[#000000] main-headings-detail-rewards"></p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-6 mt-9 main-button-rewards">
-                                <button class="bg-orange-500 text-[16px] text-white px-7 py-3 rounded-full font-semibold main-button-rewards-edit">
-                                    <a href="reward-details-update.html">
-                                        Edit Rewards
-                                    </a>
-                                </button>
-
-                                <button class="bg-[#FF2828] text-[16px] text-white px-7 py-3 rounded-full font-semibold main-button-rewards-delete">
-                                    Delete This Reward
-                                </button>
-                            </div>
-
-                        </div>
-
-                        <div class="flex justify-end items-top">
-                            <div class="rounded-md overflow-hidden">
-                                <img id="rewardImage" class="w-[320px] h-[190px] object-cover border border-[#FF4C4C]">
-                            </div>
-                        </div>
-                    </div>
+                <div class="border-t-custom mb-12"></div>
+                <div class="mt-8 flex justify-start">
+                    <button class="system-settings-background-button text-white text-[18px] font-semibold py-3 px-10 rounded-full hover:shadow-lg transition duration-200">
+                        Save Changes
+                    </button>
                 </div>
             </div>
         </main>
     </div>
 
-
-    <script src="../js/dashboard/reward-management-details.js"></script>
 </body>
 </html>

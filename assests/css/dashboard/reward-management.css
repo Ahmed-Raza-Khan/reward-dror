@@ -145,3 +145,56 @@ input::-webkit-inner-spin-button {
 .fee-configration-point-coin-button {
     background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);   
 }
+
+
+/* system settings section */
+.system-settings-main-heading {
+    font-family: var(--font-ibm-plex-sans);
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #4B5563;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.border-t-custom {
+    border-top: 1px solid #D3D4DC;
+}
+
+.btn-gradient {
+    background-image: linear-gradient(135deg, #FF6B6B 10%, #FF9A6B 100%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.input-box {
+    background-color: white;
+    border-radius: 9999px;
+    border: 1px solid #D1D5DB;
+    color: #1F2937;
+    font-size: 14px;
+    padding: 1rem 1.25rem;
+    width: 100%;
+}
+
+.input-box::placeholder {
+    color: #9CA3AF;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: #A78BFA;
+}
+
+.system-settings-background-button {
+    background: linear-gradient(89deg, #FF4C4C 4.16%, #FF7F32 99.14%);   
+}
