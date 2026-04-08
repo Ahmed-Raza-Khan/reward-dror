@@ -26,13 +26,24 @@ function renderBusinessTable(data) {
                 <td class="px-6 py-4 text-[15px] text-[#000000] font-regular border-y">${item.created}</td>
                 <td class="px-6 py-4 text-[15px] text-[#000000] font-regular border-y">${item.lastActivity}</td>
                 <td class="px-6 py-4 rounded-r-lg border-y border-r">
-                    <button class="p-2 bg-[#E2F7FF] rounded-md text-[#0077B6] hover:text-white transition">
+                    <button onclick="businessDetails(${item.id})" class="p-2 bg-[#E2F7FF] rounded-md text-[#0077B6] hover:text-white transition">
                         <img src="/assests/images/icon-awesome-eye-open.svg" alt="view">
                     </button>
                 </td>
             </tr>
         `;
     }).join('');
+}
+
+function businessDetails(id) {
+    const rewards = JSON.parse(localStorage.getItem("businessData")) || [];
+    const selected = rewards.find(item => item.id === id);
+    localStorage.setItem("businessDetails", JSON.stringify(selected));
+    window.location.href = "business-account-detail.html";
+}
+
+if (!localStorage.getItem("businessData")) {
+    localStorage.setItem("businessData", JSON.stringify(businessData));
 }
 
 document.getElementById('businessSearch').addEventListener('input', (e) => {
