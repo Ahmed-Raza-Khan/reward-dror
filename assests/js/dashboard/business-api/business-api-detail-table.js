@@ -16,30 +16,30 @@ statsContainer.innerHTML = statsData.map(stat => `
 
 const usageData = [
     { sno: "01", date: "mm/dd/yyyy", unlockId: "UNL-1234", details: "Device Unlock - User 123" },
-    { sno: "02", date: "mm/dd/yyyy", unlockId: "UNL-56", details: "Device Unlock - User 123" },
-    { sno: "03", date: "mm/dd/yyyy", unlockId: "UNL-2345", details: "Device Unlock - User 123" },
-    { sno: "04", date: "mm/dd/yyyy", unlockId: "UNL-143", details: "Device Unlock - User 123" }
+    { sno: "02", date: "mm/dd/yyyy", unlockId: "UNL-14", details: "Device Unlock - User 123" },
+    { sno: "03", date: "mm/dd/yyyy", unlockId: "UNL-2454", details: "Device Unlock - User 123" },
+    { sno: "04", date: "mm/dd/yyyy", unlockId: "UNL-544", details: "Device Unlock - User 123" }
 ];
 
 const usageTable = document.getElementById('usage-table-body');
 usageTable.innerHTML = usageData.map(row => `
-    <tr class="border-b border-gray-50 hover:bg-gray-50">
-        <td class="px-6 py-4">${row.sno}</td>
-        <td class="px-6 py-4">${row.date}</td>
-        <td class="px-6 py-4 text-blue-400 cursor-pointer">${row.unlockId}</td>
-        <td class="px-6 py-4">${row.details}</td>
+    <tr class="border-b border-[#B09A7026] hover:bg-gray-50 fee-configration-main-tick-fee">
+        <td class="px-6 py-4 text-[15px] text-[#000000]">${row.sno}</td>
+        <td class="px-6 py-4 text-[15px] text-[#000000]">${row.date}</td>
+        <td class="px-6 py-4 text-[15px] text-[#0077B6] cursor-pointer">${row.unlockId}</td>
+        <td class="px-6 py-4 text-[15px] text-[#000000]">${row.details}</td>
     </tr>
 `).join('');
 
 const logData = [
-    { sno: "01", time: "2025-12-15 14:35:21", activity: "Api Key Regenerated", color: "text-blue-400" },
-    { sno: "02", time: "2025-12-15 14:35:21", activity: "Account Suspended", color: "text-blue-400" },
-    { sno: "03", time: "2025-12-15 14:35:21", activity: "Failed Request - Error 403", color: "text-blue-400" }
+    { sno: "01", time: "2025-12-15 14:35:21", activity: "Api Key Regenerated", color: "text-[#0077B6]" },
+    { sno: "02", time: "2025-12-15 14:35:21", activity: "Account Suspended", color: "text-[#0077B6]" },
+    { sno: "03", time: "2025-12-15 14:35:21", activity: "Failed Request - Error 403", color: "text-[#0077B6]" }
 ];
 
 const logTable = document.getElementById('log-table-body');
 logTable.innerHTML = logData.map(row => `
-    <tr class="border-b border-gray-50 hover:bg-gray-50">
+    <tr class="border-b border-[#B09A7026] hover:bg-gray-50 fee-configration-main-tick-fee text-[15px]">
         <td class="px-6 py-4">${row.sno}</td>
         <td class="px-6 py-4">${row.time}</td>
         <td class="px-6 py-4 ${row.color} cursor-pointer">${row.activity}</td>

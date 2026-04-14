@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reward Dror - Business Api Detail</title>
+    <title>Reward Dror - User Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/x-icon" href="/assests/images/logo.png">
     <link rel="stylesheet" href="/assests/css/dashboard/dashboard-main.css">
-    <link rel="stylesheet" href="/assests/css/dashboard/reward-management.css">
 </head>
 <body class="overflow-x-hidden">
 
@@ -82,7 +81,7 @@
                 </button>
                 
                 <div class="absolute right-0 top-full mt-0 w-40 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Your Profile</a>
+                    <a href="my-user-profile.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Your Profile</a>
                     <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Settings</a>
                     <div class="border-t border-gray-100"></div>
                     <a href="../../login.html" class="block px-4 py-2.5 text-sm text-red-600 hover:bg-gray-50">Sign out</a>
@@ -127,115 +126,11 @@
         </aside>
 
         <main class="ml-64 flex-1 p-8 business-api-main-heading">
-            <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-                <div class="flex justify-between items-center mb-6">
-                    <div class="flex items-center gap-4">
-                        <button class="text-gray-600">
-                            <a href="bussiness-api.html">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                            </a>
-                        </button>
-                        <h1 class="text-[35px] font-medium text-[#333333]">Business Account Details</h1>
-                    </div>
-                    <div class="flex gap-3">
-                        <button class="px-6 py-3 border border-[#0D4E9C80] rounded-full text-[16px] font-semibold text-[#0D4E9C] bg-[#F6F7F8] hover:bg-blue-50">Generate Api key</button>
-                        <button class="px-6 py-3 border border-[#DE525880] rounded-full text-[16px] font-semibold text-[#DE5258] bg-[##F6F7F8] hover:bg-red-50">Suspend Account</button>
-                        <button class="px-6 py-3 rounded-full text-[16px] font-semibold text-[#FFFFFF] bg-[#D64950] hover:bg-red-600">Delete Account</button>
-                    </div>
-                </div>
-
-                <hr class="mb-8 bg-[#D3D4DC]">
-                <section class="mb-10">
-                    <h2 class="text-[26px] font-medium text-[#0754A0] mb-6">Company Information</h2>
-                    <hr class="mb-8 bg-[#D3D4DC]">
-                    <div class="grid grid-cols-2 gap-y-5 text-[20px]">
-                        <p><span class="text-[#666666] font-semibold mr-3">Comapny Name:</span> <span class=" font-regular text-[#000000]">Tech Solution Inc.</span></p>
-                        <p><span class="text-[#666666] font-semibold mr-3">Comapny Email:</span> <span class=" font-regular text-[#000000]">info@techsolutions.com</span></p>
-                        <p><span class="text-[#666666] font-semibold mr-3">Account Status:</span> <span class=" text-[#21BB60] font-semibold">Active</span></p>
-                    </div>
-                </section>
-
-                <hr class="mb-8 bg-[#D3D4DC]">
-                <section class="mb-10">
-                    <h2 class="text-[26px] font-medium text-[#0754A0] mb-6">Api Key Details</h2>
-                    <hr class="mb-8 bg-[#D3D4DC]">
-                    <div class="relative max-w-sm">
-                        <label class="absolute -top-2 left-4 bg-white px-1 text-[14px] text-[#707C8B] uppercase font-bold">API key</label>
-                        <div class="flex items-center border border-[#D7D7D7] rounded-full px-4 py-5 bg-[#FBFBFE]">
-                            <input type="text" value="335D23M5P7E7B7898GHF1234567890" class="bg-[#FBFBFE] text-[#8F8F90] text-[14px] font-regular w-full outline-none" readonly>
-                            <button class="text-gray-400 hover:text-gray-600">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="mb-8 bg-[#D3D4DC]">
-                <section class="mb-10">
-                    <h2 class="text-[26px] font-medium text-[#0754A0] mb-6">Usage Statistics</h2>
-                    <hr class="mb-8 bg-[#D3D4DC]">
-                    <div id="stats-container" class="grid grid-cols-4 gap-6">
-                        </div>
-                </section>
-
-                <hr class="mb-8 bg-[#D3D4DC]">
-                <section class="mb-10">
-                    <h2 class="text-[26px] font-medium text-[#0754A0] mb-6">Usage Statistics</h2>
-                    <hr class="mb-8 bg-[#D3D4DC]">
-                    <div class="overflow-hidden">
-                        <table class="w-full text-left">
-                            <thead class="bg-white border-b border-gray-100 text-[14px] font-medium text-[#000000]">
-                                <tr>
-                                    <th class="px-6 py-4">S.NO</th>
-                                    <th class="px-6 py-4">Date</th>
-                                    <th class="px-6 py-4">Unlock Id</th>
-                                    <th class="px-6 py-4">Details</th>
-                                </tr>
-                            </thead>
-                            <tbody id="usage-table-body" class="text-[#000000] text-[14px] font-regular">
-                                </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <hr class="mb-8 bg-[#D3D4DC]">
-                <section class="mb-10">
-                    <h2 class="text-[26px] font-medium text-[#0754A0] mb-6">Activity Log</h2>
-                    <hr class="mb-8 bg-[#D3D4DC]">
-                    <div class="overflow-hidden">
-                        <table class="w-full text-left">
-                            <thead class="bg-white border-b border-gray-100 text-[14px] font-medium text-[#000000]">
-                                <tr>
-                                    <th class="px-6 py-4">S.NO</th>
-                                    <th class="px-6 py-4">Time Stamp</th>
-                                    <th class="px-6 py-4">Activity</th>
-                                </tr>
-                            </thead>
-                            <tbody id="log-table-body" class="text-[#000000] text-[15px] font-regular">
-                                </tbody>
-                        </table>
-                    </div>
-                </section>
-                <button class="system-settings-background-button text-white px-11 py-3 rounded-full font-semibold text-[17px] shadow-lg hover:opacity-90 transition">
-                    <a href="edit-business-account.html">Edit Details</a>
-                </button>
-            </div>
-
-            <div id="successModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center">
-                <div class="bg-white p-8 rounded-2xl max-w-xs w-full text-center relative shadow-2xl">
-                    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400">&times;</button>
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Successful</h3>
-                    <p class="text-gray-400 text-sm mb-6">Fee Configuration Has Been Updated Successfully</p>
-                    <button onclick="closeModal()" class="btn-gradient w-full py-3 rounded-full text-white font-bold">Ok</button>
-                </div>
+            <div class="max-w-7xl mx-auto bg-white p-12 rounded-lg shadow-sm border border-gray-100">
+                
             </div>
         </main>
     </div>
 
-
-    <script src="/assests/js/dashboard/business-api/business-api-detail-table.js"></script>
 </body>
 </html>
