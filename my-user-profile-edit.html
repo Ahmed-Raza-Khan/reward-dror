@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reward Dror - User Profile</title>
+    <title>Reward Dror - Profile Paasword Update</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/x-icon" href="/assests/images/logo.png">
     <link rel="stylesheet" href="/assests/css/dashboard/dashboard-main.css">
-    <link rel="stylesheet" href="assests/css/dashboard/reward-management.css">
+    <link rel="stylesheet" href="/assests/css/dashboard/reward-management.css">
 </head>
 <body class="overflow-x-hidden">
 
@@ -127,46 +127,61 @@
         </aside>
 
         <main class="ml-64 flex-1 p-8 business-api-main-heading">
-            <div class="w-full max-w-full h-140 mx-auto bg-white rounded-md shadow-lg border border-gray-100 overflow-hidden">
-                <div class="px-6 py-4">
-                    <h2 class="text-[35px] font-medium text-[#333333]">My Profile</h2>
+            <div class="bg-white w-full max-w-full p-8 rounded-lg shadow-sm min-h-[600px]">
+                <div class="flex items-center gap-4 mb-8">
+                    <button>
+                        <a href="my-user-profile.html"><img src="assests/images/left-arrow-back.svg" alt="arrow"></a>
+                    </button>
+                    <h1 class="text-xl font-semibold text-gray-800">Edit Profile</h1>
                 </div>
-                <div class="mx-6 mb-8 relative border border-gray-200 rounded-xl overflow-hidden pb-12 shadow-lg">
-                    <div class="h-30 bg-[#0077b6]"></div>
-                    <div class="px-8 flex flex-col md:flex-row items-start gap-8">
-                        <div class="relative -mt-12">
-                            <img src="assests/images/profile-image-men.png" alt="Profile Avatar" class="w-32 h-32 rounded-md object-cover shadow-md">
-                        </div>
 
-                        <div class="flex-1 pt-4 grid grid-cols-2 md:grid-cols-4 gap-6">
-                            <div>
-                                <p class="text-[15px] text-[#666666] font-regular capitalized tracking-wider mb-1">First Name:</p>
-                                <p class="text-[16px] font-medium text-[#21366C]">Bella</p>
-                            </div>
-                            <div>
-                                <p class="text-[15px] text-[#666666] font-regular capitalized tracking-wider mb-1">Last Name:</p>
-                                <p class="text-[16px] font-medium text-[#21366C]">Edward</p>
-                            </div>
-                            <div>
-                                <p class="text-[15px] text-[#666666] font-regular capitalized tracking-wider mb-1">Email:</p>
-                                <p class="text-[16px] font-medium text-[#21366C]">elbert@gmail.com</p>
-                            </div>
-                        <div>
-                            <p class="text-[15px] text-[#666666] font-regular capitalized tracking-wider mb-1">Phone No:</p>
-                            <p class="text-[16px] font-medium text-[#21366C]">000-00000-00</p>
-                        </div>
-                        </div>
+                <div class="relative w-28 h-28 mb-10">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#DC6C09]">
+                        <img src="assests/images/profile-image-men.png" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                    <button class="absolute bottom-0 right-0 left-19">
+                        <img src="assests/images/camera-profile-user.jpeg" alt="cdamera-iuser" class="w-13 h-13">
+                    </button>
+                </div>
+
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    
+                    <div class="relative space-y-1">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">First Name <span class="text-[#FF0000]">*</span></label>
+                        <input type="text" placeholder="Bella" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333]">
                     </div>
 
-                    <div class="px-8 mt-14 flex gap-4">
-                        <button class="px-10 py-3 text-[17px] text-[#FFFFFF] font-semibold rounded-full shadow-md hover:opacity-90 transition-all system-settings-background-button">
-                            <a href="my-user-profile-edit.html">Edit Profile</a>
-                        </button>
-                        <button class="px-10 py-3 bg-white border border-dashed border-[#21366CCC] text-[#0077B6] font-semibold rounded-full text-[17px] hover:bg-blue-50 transition-all">
-                            <a href="profile-paswword-update.html">Change Password</a>
+
+                    <div class="relative space-y-1">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Last Name <span class="text-[#FF0000]">*</span></label>
+                        <input type="text" placeholder="Edward" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333]">
+                    </div>
+
+
+                    <div class="relative space-y-1">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Phone No <span class="text-[#FF0000]">*</span></label>
+                        <div class="flex items-center w-full px-4 py-3 rounded-full border border-[#D7D7D7]">
+                            <div class="flex items-center gap-2 pr-2 border-r border-[#333333] mr-3">
+                                <img src="assests/images/country-flag-aquare.png" alt="US" class="w-6 h-5">
+                                <span class="text-sm text-gray-600">+101</span>
+                            </div>
+                            <input type="tel" value="01234567899" class="w-full focus:outline-none text-gray-700">
+                        </div>
+                        <!-- <input type="text" placeholder="Bella" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333]"> -->
+                    </div>
+
+                    <div class="relative space-y-1">
+                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Email Address <span class="text-[#FF0000]">*</span></label>
+                        <input type="text" placeholder="elbert@gmail.com" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333]">
+                    </div>
+
+                    <div class="md:col-span-2 pt-4 mt-5">
+                        <button type="submit" class="text-white px-12 py-3 rounded-full font-medium shadow-md shadow-orange-200 hover:from-orange-500 hover:to-orange-600 transition-all system-settings-background-button">
+                            Update
                         </button>
                     </div>
-                </div>
+
+                </form>
             </div>
         </main>
     </div>
