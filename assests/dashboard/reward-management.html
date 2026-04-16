@@ -142,25 +142,29 @@
                         </div>
                     </div>
                     
-                    <div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm text-gray-500">Show</span>
-                            <select class="border border-[#FF7F32] rounded px-2 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#FF7F32]">
-                                <option>5</option>
-                                <option>10</option>
-                                <option>25</option>
-                            </select>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-3">
+                            <span class="text-[#000000] text-[16px] font-regular">Show</span>
+                            <div class="relative">
+                                <select class="appearance-none border border-[#FF7F32] rounded-md px-4 py-1 pr-5 text-[14px] font-regular text-[#000000] focus:outline-none">
+                                    <option>5</option>
+                                    <option>10</option>
+                                </select>
+                                <div class="absolute right-2 top-6 -translate-y-1/2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-[#000000]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <div class="relative">
-                                <input type="text" placeholder="Search" class="pl-5 pr-10 py-2 border border-[#FF7F32] rounded-lg text-[#000000] text-[15px] focus:outline-none focus:ring-1 focus:ring-[#FF7F32] w-64">
-                                <span class="absolute right-4 top-3 text-gray-400">
-                                    <img src="../images/search-icon-nav-dark.svg" alt="" class="h-4 w-4">
+                                <input type="text" id="businessSearch" placeholder="Search" class="pl-4 pr-10 py-2 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7F32] w-54">
+                                <span class="absolute right-3 top-2.5 text-[#000000]">
+                                    <img src="/assests/images/search-icon-nav-dark.svg" alt="search">
                                 </span>
                             </div>
-                            <button class="filter-dashed-management bg-[#FF7F32] p-3 rounded-md flex items-center justify-center">
-                                <img src="../images/search-filter-dashed-management.png" alt="filter" width="25" height="25" class="brightness-0 invert">
+                            <button class="main-button-background-fee-config p-3 rounded-md text-white">
+                                <img src="/assests/images/search-filter-dashed-management.png" alt="filtre" class="w-7 h-5">
                             </button>
                         </div>
                     </div>

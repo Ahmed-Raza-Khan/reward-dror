@@ -127,78 +127,96 @@
         </aside>
 
         <main class="ml-64 flex-1 p-8 business-api-main-heading">
-            <div class="max-w-full mx-auto bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                <div class="flex justify-between items-center mb-8">
-                    <h1 class="text-[35px] font-medium text-[#333333]">Transactions</h1>
-                    <button class="text-white text-[16px] px-6 py-3 rounded-full font-semibold transition-colors system-settings-background-button">
-                        Export (CSV, PDF)
-                    </button>
-                </div>
+            <div class="bg-gray-50 p-1 min-h-screen flex justify-center items-start">
+                <div class="w-full max-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-700 mb-6 cursor-pointer hover:text-gray-900 transition-colors">
+                            <a href="transactions-list.html"><img src="../images/left-arrow-back.svg" alt="arrow" class="h-8 w-8"></a>
+                            <span class="text-[35px] font-medium text-[#333333] ms-4">Transaction Details</span>
+                        </div>
+                        <div class="border-t-custom mb-10"></div>
 
-                <div class="flex justify-between items-center mb-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-[#000000] text-[16px] font-regular">Show</span>
-                        <div class="relative">
-                            <select class="appearance-none border border-[#FF7F32] rounded-md px-4 py-1 pr-5 text-[14px] font-regular text-[#000000] focus:outline-none">
-                                <option>5</option>
-                                <option>10</option>
-                            </select>
-                            <div class="absolute right-2 top-6 -translate-y-1/2 pointer-events-none">
-                                <svg class="w-4 h-4 text-[#000000]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <div class="flex justify-between items-center">
+                            <p class="text-[#0754A0] font-medium text-[20px]">
+                                Transaction Reference : <span class="text-[#000000] text-[20px] font-regular">TRX-12847391</span>
+                            </p>
+                            <p class="text-[#0754A0] font-medium text-[20px]">
+                                Date & Time: <span class="text-[#000000] text-[20px] font-regular">April 15, 2023 | 11:24 AM</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="m-6 p-6 border border-[#0077B6] rounded-xl bg-[#F7FDFF]">
+                        <div class="mb-5">
+                            <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">User Information</h3>
+                                <div class="border-t-custom mb-5"></div>
+                            <div class="grid grid-cols-3 gap-4 text-[17px] font-semibold">
+                                <div><span class="text-[#666666]">Name:</span> <span class="text-[#000000] text-[17px] font-[400]">John Smith</span></div>
+                                <div><span class="text-[#666666]">Email:</span> <span class="text-[#000000] text-[17px] font-[400]">info@techsolutions.com</span></div>
+                                <div><span class="text-[#666666]">User ID:</span> <span class="text-[#000000] text-[17px] font-[400]">56789</span></div>
+                            </div>
+                            <div class="border-t-custom mt-5"></div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-x-12 mb-10">
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Reward Information</h3>
+                                <div class="border-t-custom mt-5 mb-3"></div>
+                                <p class="text-[17px] font-semibold text-[#666666]">Reward Points Earned: <span class="text-[#666666] font-[400] text-[17px]">250 Points</span></p>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Reward Information</h3>
+                                <div class="border-t-custom mt-5 mb-3"></div>
+                                <div class="space-y-4 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-[17px] font-semibold text-[#666666]">Base Amount: <span class="text-[#666666] font-[400] text-[17px]">$50.00</span></span>
+                                        <span class="text-[17px] font-semibold text-[#666666]">Base Amount: <span class="text-[#666666] font-[400] text-[17px]">$50.00</span></span>
+                                    </div>
+                                    <p class="text-[17px] font-semibold text-[#666666] mt-2">Total: <span class="text-[#666666] font-[400] text-[17px]">$52.00</span></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="border-t-custom mb-5"></div>
 
-                    <div class="flex items-center gap-3">
-                        <div class="relative">
-                            <input type="text" id="businessSearch" placeholder="Search" class="pl-4 pr-10 py-2 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7F32] w-54">
-                            <span class="absolute right-3 top-2.5 text-[#000000]">
-                                <img src="/assests/images/search-icon-nav-dark.svg" alt="search">
-                            </span>
+                        <div class="grid grid-cols-2 gap-x-12 mb-10">
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Transaction Identifiers</h3>
+                                <div class="border-t-custom mb-5"></div>
+                                <div class="space-y-3 text-[17px] font-semibold">
+                                    <p class="text-[17px] font-semibold text-[#666666]">DrorPay Transaction ID: <span class="text-[#666666] font-[400] text-[17px] uppercase">dp-987654321</span></p>
+                                    <p class="text-[17px] font-semibold text-[#666666]">EGifter Order ID: <span class="text-[#666666] font-[400] text-[17px] uppercase">eg-456123789</span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Delivery Information</h3>
+                                <div class="border-t-custom mb-5"></div>
+                                <div class="space-y-3 text-[17px] font-semibold">
+                                    <p class="text-[17px] font-semibold text-[#666666]">Sent To: <span class="text-[#666666] font-[400] text-[17px]">John.Smith@Gmail.Com</span></p>
+                                    <p class="text-[17px] font-semibold text-[#666666]">Delivery Method: <span class="text-[#666666] font-[400] text-[17px]">Email Delivery</span></p>
+                                </div>
+                            </div>
                         </div>
-                        <button class="main-button-background-fee-config p-3 rounded-md text-white">
-                            <img src="/assests/images/search-filter-dashed-management.png" alt="filtre" class="w-7 h-5">
-                        </button>
-                    </div>
-                </div>
+                        <div class="border-t-custom mb-5"></div>
 
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-separate border-spacing-y-3">
-                        <thead>
-                            <tr class="text-[#000000] text-[15px] capitalized tracking-wider">
-                                <th class="px-4 py-2 font-medium">S.No</th>
-                                <th class="px-4 py-2 font-medium">Transaction ID</th>
-                                <th class="px-4 py-2 font-medium">Payment Method</th>
-                                <th class="px-4 py-2 font-medium">Amount (Base + Fee)</th>
-                                <th class="px-4 py-2 font-medium">Date/Time</th>
-                                <th class="px-4 py-2 font-medium text-center">Status</th>
-                                <th class="px-4 py-2 font-medium">Provider Transaction ID</th>
-                                <th class="px-4 py-2 font-medium text-center">Action</th>
-                            </tr>
-                        </thead>
-                            <tbody id="transaction-body" class="fee-configration-main-tick-fee">
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="bg-white p-1 flex items-center justify-between mt-3">
-                    <p class="text-[#000000] text-[16px] font-regular">Showing 1 to 10 from 60 entries</p>
-                    <div class="flex items-center border border-gray-100">
-                        <button class="px-5 py-3 rounded text-[16px] text-medium pagination-hover-background hover:text-[#FFFFFF]">Previous</button>
-                            <a href="transactions-list.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-white pagination-hover-background-null">1</button></a>
-                                <span class="px-2 text-[#000000]">|</span>
-                            <a href="transactions-list.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-[#000000] hover:text-[#FFFFFF] pagination-hover-background">2</button></a>
-                                <span class="px-2 text-[#000000]">|</span>
-                            <a href="transactions-list.html"><button class="px-5 py-3 rounded text-[17px] font-regular text-[#000000] hover:text-[#FFFFFF] pagination-hover-background">3</button></a>
-                                <span class="px-2 text-[#000000]">|</span>
-                        <button class="px-5 py-3 rounded text-[16px] text-medium pagination-hover-background hover:text-[#FFFFFF]">Next</button>
+                        <div class="grid grid-cols-2 gap-x-12">
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Status History</h3>
+                                <div class="border-t-custom mb-5"></div>
+                                <div class="space-y-3 text-sm">
+                                    <p class="text-[17px] font-semibold text-[#666666]">Transaction Completed: <span class="text-[#666666] font-[400] text-[17px]">11:24 AM</span></p>
+                                    <p class="text-[17px] font-semibold text-[#666666]">Gift Card Sent: <span class="text-[#666666] font-[400] text-[17px]">11:25 AM</span></p>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0754A0] font-medium text-[24px] mb-4">Error Details</h3>
+                                <div class="border-t-custom mb-5"></div>
+                                <p class="text-[17px] font-semibold text-[#666666]">No Errors Reported.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
-
-    <script src="../js/dashboard/transaction-list.js"></script>
 </body>
 </html>
