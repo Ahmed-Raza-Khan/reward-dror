@@ -8,15 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/x-icon" href="/assests/images/logo.png">
-    <link rel="stylesheet" href="/assests/css/dashboard/dashboard-main.css">
-    <link rel="stylesheet" href="/assests/css/dashboard/reward-management.css">
+    <link rel="stylesheet" href="../css/dashboard/dashboard-main.css">
+    <link rel="stylesheet" href="../css/dashboard/reward-management.css">
 </head>
 <body class="overflow-x-hidden">
 
     <nav class="bg-[#E2F7FF] h-[100px] flex items-center p-4 px-6 fixed top-0 left-0 w-full z-10">
         <div class="flex items-center gap-3">
             <img src="/assests/images/navbar-logo-img-main.png" alt="RewardDror Logo" class="rounded-lg shadow-inner" width="62" height="62">
-            <a href="assests/dashboard/reward-dashboard-main.html">
+            <a href="../dashboard/reward-dashboard-main.html">
                 <h1 class="text-2xl left-logo-heading">
                     <span class="text-[#0077B6]">Reward</span><span class="text-[#FF7F32]">Dror</span>
                 </h1>
@@ -82,7 +82,7 @@
                 </button>
                 
                 <div class="absolute right-0 top-full mt-0 w-40 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-300">
-                    <a href="my-user-profile.html" class="active block px-4 py-2.5 text-sm text-white bg-[#0077B6] hover:bg-blue-500">Your Profile</a>
+                    <a href="../../my-user-profile.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Your Profile</a>
                     <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">Settings</a>
                     <div class="border-t border-gray-100"></div>
                     <a href="../../login.html" class="block px-4 py-2.5 text-sm text-red-600 hover:bg-gray-50">Sign out</a>
@@ -94,92 +94,100 @@
     <div class="pt-19 flex min-h-screen bg-[#F8F9FA]">
         <aside class="w-64 bg-white border-r border-gray-100 flex flex-col fixed h-full left-0">
             <nav class="flex-1 px-0 py-6 space-y-3 side-navbar-buttons-all">
-                <a href="assests/dashboard/reward-dashboard-main.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="reward-dashboard-main.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="/assests/images/dashboard-dark-icon.svg" alt="dashboard" width="20" height="20">
                     <span>Dashboard</span>
                 </a>
 
-                <a href="assests/dashboard/reward-management.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="reward-management.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="/assests/images/rewards-menagement-icon.svg" alt="reawards" width="23" height="23">
                     <span>Rewards Management</span>
                 </a>
 
-                <a href="assests/dashboard/fee-configration.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="fee-configration.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="/assests/images/fee-configuration-icon.svg" alt="fee" width="23" height="23">
                     <span>Fee Configuration</span>
                 </a>
 
-                <a href="assests/dashboard/system-settings.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="system-settings.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="/assests/images/system-settings-icon.svg" alt="system" width="23" height="23">
                     <span>System Settings</span>
                 </a>
 
-                <a href="bussiness-api.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
+                <a href="business-management/bussiness-api.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                     <img src="/assests/images/bussiness-api.svg" alt="bussiness" width="23" height="23">
                     <span>Business API</span>
                 </a>
 
-                <a href="assests/dashboard/transactions-list.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
-                    <img src="/assests/images/transaction-icon.svg" alt="transaction" width="23" height="23">
-                    <span>Transactions</span>
+                <a href="transactions-list.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0077B6] text-white transition-colors">
+                    <img src="/assests/images/transaction-icon-LIGHT.svg" alt="transaction" width="23" height="23">
+                    <span class="active">Transactions</span>
                 </a>
             </nav>
         </aside>
 
         <main class="ml-64 flex-1 p-8 business-api-main-heading">
-            <div class="bg-white w-full max-w-full p-8 rounded-lg shadow-sm min-h-[600px]">
-                <div class="flex items-center gap-4 mb-8">
-                    <button>
-                        <a href="my-user-profile.html"><img src="assests/images/left-arrow-back.svg" alt="arrow"></a>
-                    </button>
-                    <h1 class="text-[35px] font-medium text-[#333333]">Edit Profile</h1>
-                </div>
-
-                <div class="relative w-35 h-35 mb-10">
-                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#DC6C09]">
-                        <img src="assests/images/profile-image-men.png" alt="Profile" class="w-full h-full object-cover">
-                    </div>
-                    <button class="absolute bottom-0 right-0 left-19">
-                        <img src="assests/images/camera-profile-user.jpeg" alt="cdamera-iuser" class="w-13 h-13">
+            <div class="max-w-full mx-auto bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-2xl font-bold text-gray-800">Transactions</h1>
+                    <button class="bg-[#FF6B35] hover:bg-[#e85a2a] text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                        Export (CSV, PDF)
                     </button>
                 </div>
 
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 mt-12">
-                    <div class="relative space-y-1">
-                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1 hover:text-[#222222]">First Name <span class="text-[#FF0000]">*</span></label>
-                        <input type="text" placeholder="Bella" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333] hover:text-[#0F0F0F] hover:font-medium hover:text-[16px]">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-500 text-sm">Show</span>
+                        <select class="border border-orange-200 rounded px-2 py-1 outline-none focus:ring-1 focus:ring-orange-500 text-sm">
+                            <option>5</option>
+                            <option>10</option>
+                            <option>25</option>
+                        </select>
                     </div>
-
-                    <div class="relative space-y-1">
-                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Last Name <span class="text-[#FF0000]">*</span></label>
-                        <input type="text" placeholder="Edward" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333] hover:text-[#0F0F0F] hover:font-medium hover:text-[16px]">
-                    </div>
-
-                    <div class="relative space-y-1">
-                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Phone No <span class="text-[#FF0000]">*</span></label>
-                        <div class="flex items-center w-full px-4 py-3 rounded-full border border-[#D7D7D7]">
-                            <div class="flex items-center gap-2 pr-2 border-r border-[#333333] mr-3">
-                                <img src="assests/images/country-flag-aquare.png" alt="US" class="w-6 h-5">
-                                <span class="text-sm text-gray-600">+101</span>
-                            </div>
-                            <input type="number" value="01234567899" class="w-full focus:outline-none text-gray-700 hover:text-[#0F0F0F] hover:font-medium hover:text-[16px]">
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <div class="relative w-full md:w-64">
+                            <input type="text" placeholder="Search" class="w-full pl-3 pr-10 py-2 border border-orange-200 rounded-lg text-sm outline-none focus:ring-1 focus:ring-orange-500">
+                            <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
                         </div>
-                        <!-- <input type="text" placeholder="Bella" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333]"> -->
-                    </div>
-
-                    <div class="relative space-y-1">
-                        <label class="absolute -top-2.5 left-4 bg-white px-1 text-[14px] font-bold text-[#707C8B] z-1">Email Address <span class="text-[#FF0000]">*</span></label>
-                        <input type="text" placeholder="elbert@gmail.com" class="w-full py-3 px-5 border border-[#D7D7D7] rounded-full text-[#333333] hover:text-[#0F0F0F] hover:font-medium hover:text-[16px]">
-                    </div>
-
-                    <div class="md:col-span-2 pt-3 mt-1">
-                        <button type="submit" class="text-white px-12 py-3 rounded-full font-medium shadow-md shadow-orange-200 hover:from-orange-500 hover:to-orange-600 transition-all system-settings-background-button">
-                            Update
+                        <button class="bg-[#FF6B35] p-2.5 rounded-lg text-white">
+                            <i class="fa-solid fa-sliders"></i>
                         </button>
                     </div>
-                </form>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-separate border-spacing-y-3">
+                        <thead>
+                            <tr class="text-gray-500 text-sm uppercase tracking-wider">
+                                <th class="px-4 py-2 font-semibold">S.No</th>
+                                <th class="px-4 py-2 font-semibold">Transaction ID</th>
+                                <th class="px-4 py-2 font-semibold">Payment Method</th>
+                                <th class="px-4 py-2 font-semibold">Amount (Base + Fee)</th>
+                                <th class="px-4 py-2 font-semibold">Date/Time</th>
+                                <th class="px-4 py-2 font-semibold text-center">Status</th>
+                                <th class="px-4 py-2 font-semibold">Provider Transaction ID</th>
+                                <th class="px-4 py-2 font-semibold text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transaction-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center mt-6 gap-4">
+                    <p class="text-sm text-gray-500">Showing 1 to 5 from 60 entries</p>
+                    <nav class="flex items-center gap-1">
+                        <button class="px-3 py-1 text-sm text-gray-400 hover:text-gray-700">Previous</button>
+                        <button class="w-8 h-8 flex items-center justify-center rounded bg-[#FF6B35] text-white text-sm">1</button>
+                        <button class="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 text-sm">2</button>
+                        <button class="px-1 text-gray-400">|</button>
+                        <button class="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100 text-sm">3</button>
+                        <button class="px-3 py-1 text-sm text-gray-500 hover:text-gray-700">Next</button>
+                    </nav>
+                </div>
             </div>
         </main>
     </div>
+
+
+    <script src="../js/dashboard/transaction-list.js"></script>
 </body>
 </html>
