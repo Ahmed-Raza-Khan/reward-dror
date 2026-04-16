@@ -31,10 +31,16 @@ transactions.forEach(item => {
         </td>
         <td class="px-4 py-4 text-[15px] text-[#000000] font-regular">${item.pId}</td>
         <td class="px-6 py-4 text-center">
-            <button onclick="viewDetails(${item.id})" class="p-2 bg-[#0077B61A] hover:bg-[#0077B633] rounded-lg transition">
+            <button onclick="viewDetails('${item.id}')" class="p-2 bg-[#0077B61A] hover:bg-[#0077B633] rounded-lg transition">
                 <img src="../images/icon-awesome-eye-open.svg" alt="view">
             </button>
         </td>
     `;
     tableBody.appendChild(row);
 });
+
+function viewDetails(id) {
+    const selectedTransaction = transactions.find(t => t.id === id);    
+    localStorage.setItem('selectedTransaction', JSON.stringify(selectedTransaction));    
+    window.location.href = 'transaction-list-detail.html';
+}
